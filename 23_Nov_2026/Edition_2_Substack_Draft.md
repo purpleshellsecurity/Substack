@@ -6,7 +6,7 @@ Microsoft Ignite 2026 brought several announcements across security operations a
 
 Some of these changes are generally available. Others are in preview or have rollout dates extending into December and 2027. I’ve kept those distinctions throughout.
 
-This is the second of three Ignite editions. [The first edition](https://adversarylab.substack.com/) covered AI and agent security, including discovery, identities, tool access and runtime protection. This edition focuses on day-to-day security operations, identity administration and endpoint protection. The final edition will cover Azure infrastructure and cloud security.
+This is the second of three Ignite editions. [The first edition](https://adversarylab.substack.com/p/microsoft-ignite-2026-what-can-your) covered AI and agent security, including discovery, identities, tool access and runtime protection. This edition focuses on day-to-day security operations, identity administration and endpoint protection. The final edition will cover Azure infrastructure and cloud security.
 
 ## Microsoft Ignite 2026: Security Announcements at a Glance
 
