@@ -1,5 +1,7 @@
 # Microsoft Ignite 2026 — source audit and edition coverage reconciliation
 
+> **UPDATE — 23 November 2026:** The user has now supplied the full published Edition 1 Markdown (307 lines). The earlier Edition 1 manuscript-unavailable block below is superseded. See [Edition_1_Published_Coverage_Audit.md](./Edition_1_Published_Coverage_Audit.md) for line-specific results. The published article already covers major categories previously suspected missing (agent discovery/identity, tool governance, Defender/Intune runtime controls, AKS sandboxing and Purview DLP). Remaining gaps are narrower subfeatures such as agent activity export, secretless federation, multi-tenant admin and third-party risk signals. The published article was not modified.
+
 **Audit date:** 23 November 2026  
 **Event:** 17–20 November 2026  
 **Disposition:** **PARTIAL — not cleared for publication.** This is a reproducible collection record, not proof that all Microsoft announcements have been discovered or that feature status is validated in a tenant.
