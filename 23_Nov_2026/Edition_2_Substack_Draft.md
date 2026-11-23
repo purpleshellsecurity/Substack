@@ -8,7 +8,7 @@ Some of these changes are generally available. Others are in preview or have rol
 
 This is the second of three Ignite editions. [The first edition](https://adversarylab.substack.com/) covered AI and agent security, including discovery, identities, tool access and runtime protection. This edition focuses on day-to-day security operations, identity administration and endpoint protection. The final edition will cover Azure infrastructure and cloud security.
 
-## This Week in Microsoft Security
+## Microsoft Ignite 2026: Security Announcements at a Glance
 
 Here's the main picture from the Ignite announcements:
 
