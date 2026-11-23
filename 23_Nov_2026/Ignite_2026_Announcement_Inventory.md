@@ -2,9 +2,9 @@
 
 **Created:** 23 November 2026  
 **Event:** 17–20 November 2026  
-**Status:** INCOMPLETE — research inventory, NOT an exhaustive or publication-approved evidence register.
+**Status:** INCOMPLETE — expanded source-reconciled research inventory, NOT an exhaustive or publication-approved evidence register.
 
-This inventory was assembled from the previously discussed scope and an initial direct check of Microsoft's [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/), [Sentinel announcement](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/ignite-2026-whats-new-in-microsoft-sentinel/4571174), [Defender overview](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975), and [Entra overview](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456) on 23 November. Other primary URLs are research leads from prior review, **not all revalidated in this pass**. An item here is an announced or suspected capability to reconcile; its presence does not establish release or tenant availability.
+This inventory was assembled from the previously discussed scope and direct reviews of the Book of News across Azure, Security, Windows, Copilot and Foundry sections, plus an initial direct check of Microsoft's [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/), [Sentinel announcement](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/ignite-2026-whats-new-in-microsoft-sentinel/4571174), [Defender overview](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975), and [Entra overview](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456) on 23 November. Other primary URLs are research leads from prior review, **not all revalidated in this pass**. An item here is an announced or suspected capability to reconcile; its presence does not establish release or tenant availability.
 
 ## Edition mapping
 
@@ -73,6 +73,46 @@ This inventory was assembled from the previously discussed scope and an initial 
 | IGN-55 | Azure Chaos Studio Workspaces and AKS extension | 3 | [Microsoft source](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Newly identified; validate detailed release |
 | IGN-56 | Edge agent-browsing controls and secure enterprise browser | 1 | [Microsoft source](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456) | Preview (reported) | Overlap with infrastructure networking |
 | IGN-57 | Entra External ID customer authentication | 1 | [Microsoft source](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/ai-is-changing-access-see-how-microsoft-entra-helps-you-stay-ahead-/4556456) | Unverified inventory candidate | Needs source-specific extraction |
+| IGN-58 | Azure Monitor health models and natural-language operational features | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA for health models and natural-language features | Azure > Core; distinguish non-security operations from security observability |
+| IGN-59 | Azure SRE Agent: CMK, Agent ID governance, cross-agent collaboration, Teams/multicloud | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Governance, encryption and audit for operational agents |
+| IGN-60 | Azure Copilot spaces/custom skills and Workload Center SAP/Oracle monitoring | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Security operational context; lower-priority editorial |
+| IGN-61 | Foundry models/agents deploy to AKS with pre-existing governance | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Foundry and AKS source reconciliation |
+| IGN-62 | Agent Sandbox extension for AKS VM-level isolation | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Separate from Agent Grid |
+| IGN-63 | Windows Server 2028 hardened Server Core, Trusted Launch, PQC and certificate automation | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Windows Server 2028 preview | Individual feature scope needs release docs |
+| IGN-64 | Azure DocumentDB database/collection fine-grained RBAC | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Platform identity/least-privilege functional change |
+| IGN-65 | Azure DocumentDB on Arc and Azure Local sovereignty options | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Hybrid data residency/control |
+| IGN-66 | Azure HorizonDB: Entra authentication, private endpoints, managed identities and customer-managed keys | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA service | Service controls; determine which are independently new |
+| IGN-67 | Azure SQL Managed Instance zone redundancy and multi-database link | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Resiliency/disaster recovery; lower security editorial priority |
+| IGN-68 | Azure Database for PostgreSQL point-in-time restore immutability | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Explicit backup tampering protection |
+| IGN-69 | Azure Database for PostgreSQL AMD v6 confidential compute | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | In-use protection |
+| IGN-70 | Azure Database for PostgreSQL snapshot backup and flexible server recovery | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Recovery scope |
+| IGN-71 | Microsoft Foundry evaluation, production insights and optimizer | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Mixed GA/preview | Evaluation, golden data and safety engineering |
+| IGN-72 | Foundry human annotation and managed/programmed training | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Human review and models lifecycle |
+| IGN-73 | MAI-Cyber-2-Flash and Codename MDASH validated vulnerability discovery | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Code security; MDASH entry partly new vs already scoped |
+| IGN-74 | GitHub Copilot code review secret detection and cross-repository context | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Announced; exact status unverified | Security code review vs general coding |
+| IGN-75 | Microsoft Copilot SDK 2.0 multi-tenant Rust harness security | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Include if AI security engineering scope supports |
+| IGN-76 | Copilot Code local sandbox and Copilot Managed Runtime governance | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Frontier; GA future target for Code | Separate runtime/sandbox controls |
+| IGN-77 | Agent 365 management insights default without Agent 365 license | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA for specified insights | License distinction |
+| IGN-78 | Agent 365 action center for inactive/ownerless agents | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Private preview targeted December | Future milestone |
+| IGN-79 | Agent 365 Agent Map task classification and duplicate-agent assessment | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Governance inventory |
+| IGN-80 | Agent 365 centrally managed plugins and skills per user/group | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Authorization/control |
+| IGN-81 | Agent 365 MCP server and tool governance including Azure AI Gateway/LiteLLM | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Central visibility and blocking dependencies |
+| IGN-82 | Agent 365 local/shadow agent and shadow MCP server visibility/governance | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Unmanaged agent tool discovery |
+| IGN-83 | Agent 365 Business Analytics and FinOps for AI reporting | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Frontier preview | Business operations, optional inclusion with explicit disposition |
+| IGN-84 | Agent 365 partner risk signals from Check Point/Cyera/Darktrace/Zenity to Sentinel | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview/announced | Risk signal schema and alert correlation |
+| IGN-85 | AI Readiness Initiatives for patching, passkeys and agent governance | 2 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | January 2027 preview target | Not available at Ignite |
+| IGN-86 | Windows 365 context-based clipboard/drive/printer/USB redirection policies via CA authentication context | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Distinct access-control announcement |
+| IGN-87 | Windows 365 Windows App mobile application management | 2 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Protection on unmanaged endpoints |
+| IGN-88 | Windows 365 for Agents on-prem application access using agent identities | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Legacy-application identity authorization |
+| IGN-89 | Windows 365 for Agents persistent Cloud PCs and Foundry/Copilot Studio integration | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Mixed preview/planned | Governed computer-use environment |
+| IGN-90 | Windows declarative device management, OS baseline and OS reliability reports | 2 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Mixed preview | Distinct security administration changes |
+| IGN-91 | Microsoft Purview Copilot DLP for unlabeled sensitive files and prompts with attachments/links | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Data governance |
+| IGN-92 | Microsoft Purview classification/labeling scale and accuracy | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Security/data controls |
+| IGN-93 | Microsoft Purview Windows endpoint agent data access/sharing restrictions | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Preview | Per-agent and group protection |
+| IGN-94 | Azure Cosmos DB vaulted backup GA | 3 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Duplicate/cross-reference to backup item IGN-53, do not double count |
+| IGN-95 | Windows Endpoint Security Platform third-party protection integration | 2 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | GA | Cross-reference IGN-41, possible duplicate |
+| IGN-96 | Agent 365 Copilot/Agent management licensing and usage metrics | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Mixed GA | Overlap IGN-77; dedupe before final count |
+| IGN-97 | Foundry/Azure gateway model routing and expanded APIs | 1 | [Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | Announced | AI app control but mainly functionality; classify rather than auto-exclude |
 
 ## Source register and collection limits
 
@@ -117,4 +157,15 @@ This inventory was assembled from the previously discussed scope and an initial 
 - Capture exact original announcement date, revision date, feature release date and preview/GA/rollout status separately. Leave unknown values unknown.
 - Reconcile all three drafts against this inventory and record coverage dispositions. Do not designate an edition publication-ready until unresolved material claims are cleared.
 
-**Inventory row count: 57. This count is a research checklist total, not a count of verified announcements or released features.**
+**Inventory row count: 97 (57 initial + 40 additional research rows). Includes deliberately flagged overlaps; this is NOT 97 unique or validated product releases.**
+
+
+## November 23 reconciliation update
+
+- The Microsoft Ignite Book of News was directly inspected in its Azure, Security, Windows, Microsoft Foundry, GitHub and Copilot sections. Forty additional *candidate rows* (IGN-058–IGN-097) were added, including intentionally flagged overlap records requiring consolidation.
+- The **Book of News explicitly labels its Instant Summaries as AI-generated and potentially incorrect**. Source-specific detail should be read from the underlying original announcement rather than a summary alone.
+- Correct **IGN-034** naming: the Book of News calls it **Microsoft MCP Server for Enterprise**, not 'for IT administrators'. Confirm naming in the Entra technical post.
+- **IGN-009** ingest-time normalization has conflicting status in Microsoft's November 17 Sentinel and November 18-updated Defender announcements; public preview timing unresolved.
+- **IGN-040/041/095** and other cross-source duplicates are not additional unique releases.
+- Editorial scoping: operational resilience, platform access-control and AI app governance changes are included in this research inventory even when not traditional detection-engineering content. Inclusion in a Substack article remains an editorial decision, with excluded items documented.
+- Existing edition manuscripts are not stored in this repository. Edition 2 and 3 drafts are available in the current conversation; Edition 1's full article text is not available for full comparison. No comprehensive content-level edition coverage claim is made.
