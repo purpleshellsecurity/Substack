@@ -39,7 +39,7 @@ The [current inventory](./Ignite_2026_Announcement_Inventory.md) records the new
 
 ## 3. Draft reconciliation status
 
-### Edition 1 — **BLOCKED: full manuscript unavailable**
+### Edition 1 — **BLOCKED: full manuscript unavailable (published post identified by ID 226072339)**
 
 Previously assembled article title: **“Microsoft Ignite 2026: What Can Your AI Agents Actually Do?”** The full approved article text was not present in this repository or retrievable as a complete manuscript for line-by-line audit. Its earlier existence and topic are known, but it would be unsafe to mark coverage as complete or missing from memory alone.
 
@@ -108,3 +108,17 @@ These are **substantive inventory gaps**; they do not imply all are mandatory fe
 **None of the three editions is marked complete.** To remove this block, record: (a) verified primary support for each substantive claim; (b) feature availability and effective date separately from announcement date; (c) a per-ID disposition of covered / partial / missing / erroneous / duplicate / excluded; (d) any source retrieval failures; and (e) a complete original Edition 1 text comparison.
 
 An article can be editorially concise while the underlying inventory is exhaustive *within an explicitly bounded, documented source set*. Anything unreviewed must remain a named audit gap.
+
+
+## Edition 1 source identification update — 23 November 2026
+
+The user provided the authenticated Substack dashboard record: https://adversarylab.substack.com/publish/posts/detail/226072339?referrer=%2Fpublish%2Fposts%2Fpublished
+
+Using the user's connected browser tab, the dashboard itself was directly accessed and confirmed:
+
+- **Published title:** Microsoft Ignite 2026: What Can Your AI Agents Actually Do?
+- **Published:** November 22, 2026, at 12:09 PM (as displayed by Substack)
+- **Post ID:** 226072339
+- **Text retrieval status:** **BLOCKED**. The link opens the post analytics/dashboard, not the published article body. Neither the full manuscript nor a verified public permalink was available from the dashboard text. Public title search did not return the post. **No factual claim about completeness of Edition 1 has been drawn from its title or analytics.**
+
+**Required to unblock line-by-line reconciliation:** the public reader URL accessed through Substack's `View post` control, or the article text/export. Retain the post ID as a stable reconciliation identifier. Do not alter the published post during the audit.
