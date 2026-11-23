@@ -1,6 +1,6 @@
-# Microsoft Ignite 2026: What's New in Security Operations & Identity?
+# Microsoft Ignite 2026: From Alerts to an Integrated SOC
 
-### A closer look at Microsoft's changes to Sentinel, Defender, Entra, Intune and security administration.
+*What's new across Microsoft Defender, Sentinel, Entra, Intune, and security automation.*
 
 Microsoft Ignite 2026 brought several announcements across security operations and identity. Microsoft is expanding its integrated SOC experience, adding more security data and automation capabilities to Sentinel, and introducing new ways to protect endpoints and manage privileged access.
 
@@ -57,13 +57,13 @@ These changes matter when an investigation crosses endpoint, identity, SaaS and 
 
 **Data operations and automation governance**
 
-The public-preview Data & Connectors Overview brings connector health, ingestion volume and latency information into a unified management view. Related Unified Data Management capabilities help administrators work with connectors, tables and ingestion health.
+The public-preview Data & Connectors Overview brings connector health, ingestion volume and latency information into a unified management view. Related Unified Data Management capabilities, also in public preview, help administrators work with connectors, tables and ingestion health.
 
 Also in public preview, Sentinel automation audit logs record the creation, modification, activation, deactivation and deletion of automation rules and generated playbooks. That creates an additional record for investigating unintended response-workflow changes.
 
 The **Connector Builder Agent** uses AI-assisted development in Visual Studio Code to generate connector schemas, polling logic, UI and deployment assets, with validation capabilities. Microsoft targeted general availability for the end of November 2026. This was not a confirmed GA release at Ignite.
 
-Finally, Microsoft announced **ingest-time normalization**, using Microsoft-managed parsers to standardize selected security logs as they are ingested. The dedicated Sentinel announcement says public preview is planned for December 2026. Microsoft's Defender overview describes the capability as already in preview, so the exact availability is inconsistent across those announcements. I would treat it as an announced capability and verify tenant availability before depending on it.
+Finally, Microsoft announced **ingest-time normalization**, using Microsoft-managed parsers to standardize selected security logs as they are ingested. The dedicated Sentinel announcement says public preview is planned for December 2026. Microsoft's Defender overview describes the capability as already in preview, so the exact availability is inconsistent across those announcements. Because the two announcements give different preview timing, organizations should confirm availability in their environments before relying on the capability.
 
 **Sources:** [Sentinel Ignite announcement](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/ignite-2026-whats-new-in-microsoft-sentinel/4571174) | [Detailed connector announcement, November 11](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-ignite-2026-new-sentinel-connectors-announcement/4565258) | [Defender and Sentinel overview](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975)
 
@@ -107,7 +107,7 @@ Microsoft says the remediation was rolling out to Defender Antivirus devices, wi
 
 **Endpoint operations and telemetry**
 
-Other endpoint announcements include a new health dashboard consolidating device inventory, sensor communication, antivirus service health and update status; staged deployment and preview controls for Defender updates; and time-limited, traceable offboarding keys and packages.
+Microsoft also announced a consolidated endpoint health dashboard, with public preview rolling out over the following weeks. It brings together device inventory, sensor communication, antivirus service health, and update status. Other endpoint changes include staged deployment and preview controls for Defender updates, along with time-limited, traceable offboarding keys and packages.
 
 Microsoft also announced support for shared Android and iOS devices configured with Entra shared-device mode and managed through Intune, so Defender protection remains associated with the device across different users.
 
@@ -171,7 +171,7 @@ Microsoft announced general availability of **Baseline Security Mode 2026** with
 
 Compared with the 2025 baseline, this expands scope to Intune, Purview and Dynamics 365, introduces an Applications category, and adds **24 settings**. They include blocking non-allowlisted Office COM add-ins, requiring MFA for guests, requiring two administrators to approve sensitive Intune actions, preventing external guests from holding Purview eDiscovery roles and restricting overly broad application access to SharePoint and OneDrive data.
 
-Administrators can examine individual settings and use simulation before enabling them. The Microsoft 365 version is GA with phased rollout; the Azure and Windows baseline extensions are described as **private preview** in the Microsoft 365 announcement and belong primarily in the infrastructure edition.
+Administrators can examine individual settings and use simulation before enabling them. The Microsoft 365 version is GA with phased rollout. Azure and Windows baseline extensions will be covered separately in the infrastructure edition, where their preview availability can be distinguished by product.
 
 **Source:** [Microsoft Baseline Security Mode 2026](https://techcommunity.microsoft.com/blog/microsoft_365blog/ignite%E2%80%9926-spotlight-announcing-microsoft-baseline-security-mode-2026-general-ava/4572694)
 
@@ -179,13 +179,13 @@ Administrators can examine individual settings and use simulation before enablin
 
 Defender's malicious-QR-code protection in Teams chats is in **public preview**. It can identify risky URLs embedded in QR codes, blur harmful material and present warnings, with supported investigation in advanced hunting. Microsoft's separate Teams meeting synthetic-audio/video detection relies on certified third-party providers; availability varies.
 
-Microsoft also announced Edge for Business extension safety information and preview controls to restrict extension access to protected pages, alongside browser telemetry for Sentinel. Exact settings and rollout depend on the Edge and connector release documentation.
+Microsoft also announced generally available extension safety information in Edge for Business, preview controls to restrict extensions from accessing protected pages, and a native Sentinel connector in preview for browser security telemetry. The capabilities have different licensing requirements: extension safety requires eligible Microsoft 365 licensing, extension leak controls require Microsoft 365 E3, and the Sentinel connector requires Sentinel licensing.
 
 The **Windows Endpoint Security Platform** is available in supported Windows 11 releases. Its initial integration model is intended for approved security vendors, requiring Microsoft Virus Initiative enrollment and appropriate Artifact Signing. It should not be mistaken for a general-purpose API available to any process.
 
 For remote desktops, **Windows 365 and Azure Virtual Desktop context-based redirection** is GA, allowing administrators to conditionally restrict clipboard, drive, printer and USB redirection according to Entra authentication context. Windows App Mobile Application Management for Windows remains in public preview.
 
-**Sources:** [Defender and Teams announcements](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975) | [Windows security What's New](https://learn.microsoft.com/en-us/windows/security/whats-new) | [Endpoint platform enrollment requirements](https://learn.microsoft.com/en-us/windows/win32/wesp/wesp-requirements) | [Windows 365 Ignite announcement](https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-365-at-ignite-2026-introducing-new-cloud-pc-capabilities-for-people-agen/4570006) | [Microsoft Ignite Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/)
+**Sources:** [Defender and Teams announcements](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/ignite-2026-whats-new-in-microsoft-defender--sentinel/4569975) | [Edge for Business Ignite announcement](https://blogs.windows.com/msedgedev/2026/11/17/edge-for-business-ignite-2026-innovations/) | [Windows security What's New](https://learn.microsoft.com/en-us/windows/security/whats-new) | [Endpoint platform enrollment requirements](https://learn.microsoft.com/en-us/windows/win32/wesp/wesp-requirements) | [Windows 365 Ignite announcement](https://techcommunity.microsoft.com/blog/windows-itpro-blog/windows-365-at-ignite-2026-introducing-new-cloud-pc-capabilities-for-people-agen/4570006)
 
 ### On-Premises Baseline Security
 
@@ -205,15 +205,19 @@ The new Defender and Intune controls raise similar questions around deployment. 
 
 ## The Engineer's Assessment
 
-Across these announcements, Microsoft is bringing more security operations into shared workflows across Defender, Sentinel, Entra and Intune.
+Anyone who's worked in a SOC knows how much time goes into switching between tools, gathering evidence, and piecing together what happened during an incident.
 
-The most practical changes are those that give teams additional evidence and control: auditing automation-rule changes, correlating third-party signals, monitoring privileged sessions, reviewing endpoint health and evaluating new baseline policies before enforcement.
+During BRK324, Microsoft mentioned that SOC analysts work across an average of 10.9 different consoles during an incident. Having worked in security operations, I can attest that this is pretty accurate.
 
-For security engineering teams, I think the next step is understanding which parts of those workflows can be validated independently.
+With ISOC, Microsoft is continuing its efforts to reduce the number of consoles analysts need to work across by integrating Sentinel, Defender, threat intelligence, exposure management, and response capabilities.
 
-If a connector changes its schema, does the detection still work? If an agent generates a rule, can we reproduce the result with known malicious and benign cases? If temporary shielding is applied, can we confirm which traffic or action it blocked and whether that protection persists until the actual fix is deployed?
+Bringing these capabilities together also creates an opportunity to provide security teams with insights that are more relevant to their business. Every organization has different systems, applications, dependencies, and risks. Understanding which assets support critical business functions, who owns them, and how they're connected helps determine which threats matter most and how organizations should respond.
 
-Microsoft has announced a number of capabilities that could support those workflows. Their operational value will depend on the licensing, telemetry, deployment requirements and validation results in each environment.
+Microsoft hasn't claimed to have completely solved this problem, but we're moving closer to centralized security capabilities that can use an organization's own data and business context to inform security decisions.
+
+Now the real work begins: connecting these capabilities to the systems, data, and business processes they're meant to protect.
+
+**Session reference:** [BRK324 — The Alert Is Dead: The Blueprint for the Agentic SOC](https://www.youtube.com/watch?v=Rz1Ky9Kf54I)
 
 ## Closing
 
