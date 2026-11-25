@@ -93,6 +93,20 @@
 4. **New governance items:** Follow individual Azure Policy IP filtering, Policy Enrollments, Validating Admission Policy, scoped enforcement, and machine inventory documentation. These are real candidates missing from the first draft, not assumptions about GA.
 5. **Full coverage:** No validated exhaustive pagination of Azure Updates or entire Microsoft Learn change logs across all services. Completeness cannot be asserted beyond listed source families. No live tenant, license, subscription, or regional deployment tests performed.
 
+
+## Additional product-family scan — findings from 17–24 November
+
+The first pass did not enumerate all product-family releases. This second targeted scan found the following candidates; they have **not** been silently added to the article.
+
+| Capability | Microsoft primary evidence | Status in source | Editorial decision |
+|---|---|---|---|
+| Azure SQL Database transparent data encryption scan suspend/resume | [Azure SQL product blog index](https://techcommunity.microsoft.com/category/azuredatabases/blog/azuresqlblog/) (Nov 17 announcement) | Preview | NEW candidate; validate exact risk/tradeoff before article |
+| Configuration Manager connector for Azure Arc | [Arc 17 Nov listing](https://techcommunity.microsoft.com/tag/hybrid?messages.widget.messagelistfornodebyrecentactivitywidget-tab-main-messages-list-for-tag-widget-0=newest) | Public preview | NEW candidate for hybrid inventory and asset visibility |
+| Azure Kubernetes Fleet Manager security patch auto-upgrade channel | [AKS Ignite deep dive](https://techcommunity.microsoft.com/blog/appsonazureblog/run-models-and-agents-on-your-own-kubernetes-clusters-aks-at-microsoft-ignite-20/4573912) | GA listed within Fleet Manager update | NEW candidate, stronger infrastructure-security relevance than unrelated GPU performance updates |
+| Azure Policy IP filtering | [Azure Governance 24 Nov](https://techcommunity.microsoft.com/blog/azuregovernanceandmanagementblog/azure-governance--management--microsoft-ignite-2026/4571751) | Public preview | NEW candidate; prior Build 2025 post called private preview, which is *historical*, not a current contradiction |
+
+**Source timing qualification:** The November 24 Azure governance announcement is post-conference roundup evidence; it confirms the November Ignite product family but does not establish every feature was first released on that date. The article should not imply all these changes were first announced at Ignite.
+
 ## Publication gate
 
 Do not treat `Edition_3_Substack_Draft.md` as source-verified for publication. Once OPEN/PARTIAL rows relevant to the article are closed, update the draft and perform a **claim-by-claim audit against this register**. The Engineer's Assessment remains editorially unapproved by the user.
