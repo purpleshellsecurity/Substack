@@ -1,7 +1,7 @@
 # Microsoft Ignite 2026 — Edition 3 Verified Inventory
 
 **Review date:** 24 November 2026 (America/New_York)  
-**Status:** EDITORIAL RECONCILIATION CLOSED — source-conflicts and scoped exclusions recorded; article draft deliberately unchanged  
+**Status:** ORIGINAL 32-ENTRY RECONCILIATION CLOSED; CROSS-SOURCE COVERAGE AUDIT IDENTIFIED ADDITIONAL RELEASES — see linked coverage audit; article unchanged  
 **Scope:** 32 original Edition 3 IDs, plus separately discovered infrastructure/security items. This register distinguishes *verified announcement*, *verified rollout status*, and *verified tenant functionality*; no tenant deployment testing has occurred.
 
 ## Additional reconciliation update — backup and SQL
@@ -9,6 +9,8 @@
 - [Azure Backup security overview](https://learn.microsoft.com/en-us/azure/backup/security-overview) published/updated November 17 explicitly labels Defender-backed recovery point threat detection, cross-tenant restore and Azure VM bulk Safe Restore as **preview**. Threat detection is alert-driven using the source VM and must not be represented as a malware scan of the stored backup or proof of clean recovery points.
 - [Cross-tenant restore preview documentation](https://learn.microsoft.com/en-us/azure/backup/cross-tenant-restore-overview) limits support to vaulted recovery points, requires mapping before tenant lockout, and has workload/region restrictions. Backup vaults: West Europe, North Europe, East US, UK South, Australia East/Southeast and Brazil South per November 17 documentation.
 - [Dedicated MI link GA announcement](https://techcommunity.microsoft.com/blog/azuresqlblog/mi-link-support-for-multiple-databases-in-an-always-on-availability-group-is-now/4571052) confirms multi-database mode **GA November 17**. The SSMS multi-node wizard remains preview.
+
+> **Coverage cross-check update, 24 November 2026:** A further [Book of News / Azure Updates / product-feed audit](./Edition_3_Coverage_Completeness_Audit.md) located **20 additional feature candidates** outside the original register. Its 30 individually indexed Azure Updates records include adaptive virtual patching, Key Vault/SQL symmetric-key changes, Network Watcher log improvements, DDoS policy changes, HorizonDB feature-specific statuses and AKS trusted-launch previews. The *original 32-entry reconciliation* is closed, but **Edition 3 editorial scope must be expanded using these findings before publication**. The Azure Updates list returned zero items in noninteractive retrieval, so an exhaustive source census remains unproven. Also note independently documented Chaos Studio AKS GA-versus-preview and PostgreSQL immutable-backup GA-versus-preview contradictions.
 
 ## Key corrections since initial draft
 
