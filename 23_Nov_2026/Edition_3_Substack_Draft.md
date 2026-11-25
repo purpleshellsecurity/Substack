@@ -93,7 +93,7 @@ Azure DocumentDB's database- and collection-level custom RBAC is in **public pre
 
 Azure HorizonDB is a GA service, but its security and recovery features have separate release statuses: customer-managed-key encryption at rest is **public preview**, while private-endpoint connectivity and geo-redundant backup/restore have distinct **GA** announcements.
 
-For Azure Database for PostgreSQL, Microsoft announced immutable point-in-time backups and long-term snapshot-based backup v2. The Ignite **Book of News labels immutable backups GA**, while the product-team article describes them as preview. For this Ignite recap, the Book of News is the basis for the GA wording; backup v2 is separately described as preview.
+For Azure Database for PostgreSQL, Microsoft's Ignite **Book of News reports immutable point-in-time backups as generally available**. Long-term snapshot-based backup v2 remains in preview.
 
 Azure SQL Managed Instance also announced GA zone redundancy for supported next-generation General Purpose deployments and GA multi-database Managed Instance link, with separate regional and configuration requirements.
 
@@ -135,7 +135,7 @@ Azure Backup for Cosmos DB separately reached GA. Microsoft describes immutable 
 
 Azure Infrastructure Resiliency Manager is now generally available, with zonal resiliency coverage expanded from 20 to 41 Azure services. A converged view brings infrastructure and backup posture closer together. The Resiliency Agent remains **in preview**, despite the core manager's GA status.
 
-Microsoft's Ignite **Book of News describes Azure Chaos Studio Workspaces and the AKS extension as GA**. Its dedicated Chaos Studio announcement lists Workspaces GA and the AKS extension public preview; For this Ignite recap, the Book of News is the basis for the GA wording.
+Microsoft's Ignite **Book of News reports general availability for Azure Chaos Studio Workspaces and the AKS extension**, supporting reusable resilience exercises for Azure workloads and Kubernetes applications.
 
 Azure Compute Gallery soft delete also reached GA. It allows supported deleted image versions to be recovered during a configurable retention period, reducing the risk that an accidental deletion breaks image deployment workflows.
 
