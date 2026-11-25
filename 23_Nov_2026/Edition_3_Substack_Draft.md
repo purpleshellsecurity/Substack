@@ -191,11 +191,11 @@ Other relevant announcements include Azure Database for PostgreSQL confidential-
 
 ## The Engineer's Assessment
 
-Microsoft is trying to close security gaps at the infrastructure level with solutions that provide more control and observability over AI workloads. We’re seeing that with Azure Firewall’s inspection capabilities and Agent Grid’s controls and visibility into agent communications across supported workloads.
+Microsoft is trying to close security gaps at the infrastructure level by giving organizations more control and visibility over AI workloads. Solutions like Azure Firewall and Agent Grid give security teams more ways to inspect traffic, limit access, and monitor communications across supported workloads.
 
-As organizations connect AI to more of their systems and data, security teams need to understand that activity and have ways to put boundaries around it. These announcements provide additional places to enforce those boundaries and gather information about how the workloads are interacting with the environment. That could give organizations a better basis for deciding where they’re comfortable using AI and what protections need to be in place.
+Even with these solutions in place, organizations still need to understand the systems they’re protecting and how the controls fit into the environment. Knowing that an agent connected to a service is a starting point. We also need to know what that service does, what data it handles, and how the agent is supposed to use it. We need to be able to trace the agent’s actions and network activity across those systems.
 
-For me, the underlying context still matters. Seeing that an agent connected to a service gives us a starting point. We also need to understand what that service does, what data it handles, and what the agent can do through that connection. While Microsoft is providing the tools and capabilities, organizations still need to determine which activity is expected and where controls need to be applied.
+That context helps us understand whether the activity is expected in the environment.
 
 ## Closing
 
