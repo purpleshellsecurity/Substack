@@ -93,7 +93,7 @@ Azure DocumentDB's database- and collection-level custom RBAC is in **public pre
 
 Azure HorizonDB is a GA service, but its security and recovery features have separate release statuses: customer-managed-key encryption at rest is **public preview**, while private-endpoint connectivity and geo-redundant backup/restore have distinct **GA** announcements.
 
-For Azure Database for PostgreSQL, Microsoft announced immutable point-in-time backups and long-term snapshot-based backup v2. The Ignite **Book of News labels immutable backups GA**, while the product-team article describes them as preview. For this series I am using the Book of News GA classification, while retaining the discrepancy in the research audit; backup v2 is separately described as preview.
+For Azure Database for PostgreSQL, Microsoft announced immutable point-in-time backups and long-term snapshot-based backup v2. The Ignite **Book of News labels immutable backups GA**, while the product-team article describes them as preview. For this Ignite recap, the Book of News is the basis for the GA wording; backup v2 is separately described as preview.
 
 Azure SQL Managed Instance also announced GA zone redundancy for supported next-generation General Purpose deployments and GA multi-database Managed Instance link, with separate regional and configuration requirements.
 
@@ -135,7 +135,7 @@ Azure Backup for Cosmos DB separately reached GA. Microsoft describes immutable 
 
 Azure Infrastructure Resiliency Manager is now generally available, with zonal resiliency coverage expanded from 20 to 41 Azure services. A converged view brings infrastructure and backup posture closer together. The Resiliency Agent remains **in preview**, despite the core manager's GA status.
 
-Microsoft's Ignite **Book of News describes Azure Chaos Studio Workspaces and the AKS extension as GA**. Its dedicated Chaos Studio announcement lists Workspaces GA and the AKS extension public preview; I've followed the Book of News for this event recap and retained the discrepancy in the research register.
+Microsoft's Ignite **Book of News describes Azure Chaos Studio Workspaces and the AKS extension as GA**. Its dedicated Chaos Studio announcement lists Workspaces GA and the AKS extension public preview; For this Ignite recap, the Book of News is the basis for the GA wording.
 
 Azure Compute Gallery soft delete also reached GA. It allows supported deleted image versions to be recovered during a configurable retention period, reducing the risk that an accidental deletion breaks image deployment workflows.
 
@@ -183,11 +183,11 @@ For Windows Server 2028, Microsoft introduced Hardened Server Core in Insider Pr
 
 Microsoft announced a gated preview of AMD EPYC Turin-based v7 confidential VMs, along with a technology showcase of confidential bare-metal AI workloads on NVIDIA Vera Rubin NVL72.
 
-The broader confidential-computing update includes GA support for selected Intel TDX confidential AKS worker-node configurations and additional encryption and migration capabilities. New confidential enclaves, Confidential Child Capable VMs, and next-generation confidential containers on AKS remain engineering work for future releases, not generally available Azure offerings.
+The broader confidential-computing update includes GA support for selected Intel TDX confidential AKS worker-node configurations and additional encryption and migration capabilities. The Ignite Book of News groups Azure Confidential Enclaves and AKS Kata CoCo confidential containers among the announced **previews**. More detailed confidential-computing posts describe some underlying enclave and child-VM designs as ongoing engineering, so support for particular SKUs and deployment paths should not be assumed.
 
 Other relevant announcements include Azure Database for PostgreSQL confidential-compute options and confidential VMs on Azure Local supported by AMD SEV-SNP. Supported processors, regions, workloads, and attestation capabilities differ by product.
 
-**Sources:** [Azure Confidential Computing Ignite overview](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/what%E2%80%99s-new-in-azure-confidential-computing-%E2%80%94-ignite-2026/4573909) | [Turin confidential VM preview](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/announcing-gated-preview-of-next-gen-azure-confidential-vms-with-5th-generation-/4570276) | [Future minimal-TCB work](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/shrinking-the-trusted-computing-base-for-sensitive-cloud-workloads/4573926) | [PostgreSQL announcements](https://techcommunity.microsoft.com/blog/adforpostgresql/more-power-more-resilience-better-value-azure-database-for-postgresql-at-ignite-/4573613) | [Azure Local](https://techcommunity.microsoft.com/blog/azurearcblog/whats-new-with-sovereign-private-cloud-at-microsoft-ignite-2026/4573886)
+**Sources:** [Ignite Book of News](https://news.microsoft.com/events/ignite/2026/book-of-news/) | [Azure Confidential Computing Ignite overview](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/what%E2%80%99s-new-in-azure-confidential-computing-%E2%80%94-ignite-2026/4573909) | [Turin confidential VM preview](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/announcing-gated-preview-of-next-gen-azure-confidential-vms-with-5th-generation-/4570276) | [Future minimal-TCB work](https://techcommunity.microsoft.com/blog/AzureConfidentialComputingBlog/shrinking-the-trusted-computing-base-for-sensitive-cloud-workloads/4573926) | [PostgreSQL announcements](https://techcommunity.microsoft.com/blog/adforpostgresql/more-power-more-resilience-better-value-azure-database-for-postgresql-at-ignite-/4573613) | [Azure Local](https://techcommunity.microsoft.com/blog/azurearcblog/whats-new-with-sovereign-private-cloud-at-microsoft-ignite-2026/4573886)
 
 ## The Engineer's Assessment
 
