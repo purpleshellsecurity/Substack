@@ -191,19 +191,11 @@ Other relevant announcements include Azure Database for PostgreSQL confidential-
 
 ## The Engineer's Assessment
 
-One announcement I spent some time looking into was Azure Firewall AI Security, particularly its ability to inspect prompts as they travel across the network.
+Microsoft is trying to close security gaps at the infrastructure level with solutions that provide more control and observability over AI workloads. We’re seeing that with Azure Firewall’s inspection capabilities and Agent Grid’s controls and visibility into agent communications across supported workloads.
 
-Having worked extensively in detection engineering, I've seen how difficult it can be to determine whether activity is malicious when you're looking at individual events without the surrounding context.
+As organizations connect AI to more of their systems and data, security teams need to understand that activity and have ways to put boundaries around it. These announcements provide additional places to enforce those boundaries and gather information about how the workloads are interacting with the environment. That could give organizations a better basis for deciding where they’re comfortable using AI and what protections need to be in place.
 
-We're seeing similar challenges with AI agents.
-
-Azure Firewall introduces another inspection point for supported AI traffic, while Agent Grid and AI Gateway provide additional controls over agent communication and access to tools and models.
-
-What interests me is how much context these different controls have when making security decisions.
-
-A firewall might identify a suspicious prompt, but it doesn't necessarily understand the task an agent was asked to perform or how that prompt relates to the broader execution.
-
-As Microsoft continues expanding these capabilities, I think understanding the visibility and limitations of each enforcement point will matter just as much as the protection it provides.
+For me, the underlying context still matters. Seeing that an agent connected to a service gives us a starting point. We also need to understand what that service does, what data it handles, and what the agent can do through that connection. While Microsoft is providing the tools and capabilities, organizations still need to determine which activity is expected and where controls need to be applied.
 
 ## Closing
 
