@@ -191,13 +191,19 @@ Other relevant announcements include Azure Database for PostgreSQL confidential-
 
 ## The Engineer's Assessment
 
-*Proposed direction for editorial review, not yet your approved assessment.*
+One announcement I spent some time looking into was Azure Firewall AI Security, particularly its ability to inspect prompts as they travel across the network.
 
-Across these announcements, Microsoft is adding more places to apply security controls directly in Azure infrastructure, from the network and identity layers to workload configuration, image validation, and recovery.
+Having worked extensively in detection engineering, I've seen how difficult it can be to determine whether activity is malicious when you're looking at individual events without the surrounding context.
 
-The part I would focus on is how those controls are applied in a real environment. A baseline that disables Shared Key access might improve security, but an application that still depends on it could stop working. An agent network policy can restrict connections, but only when the workload is supported and its traffic follows the intended enforcement path. A recovery policy is useful only if the organization has established that its critical applications can actually be restored.
+We're seeing similar challenges with AI agents.
 
-That brings us back to business context. Organizations have different dependencies, acceptable downtime, and operational requirements. The engineering work is understanding those relationships and configuring the controls accordingly, then verifying they produce the expected result without disrupting the systems they're meant to protect.
+Azure Firewall introduces another inspection point for supported AI traffic, while Agent Grid and AI Gateway provide additional controls over agent communication and access to tools and models.
+
+What interests me is how much context these different controls have when making security decisions.
+
+A firewall might identify a suspicious prompt, but it doesn't necessarily understand the task an agent was asked to perform or how that prompt relates to the broader execution.
+
+As Microsoft continues expanding these capabilities, I think understanding the visibility and limitations of each enforcement point will matter just as much as the protection it provides.
 
 ## Closing
 
