@@ -6,15 +6,17 @@ When I read a technique in MITRE ATT&CK, I usually have two questions. How would
 
 I wanted to take that same approach to AI security using MITRE ATLAS. Say an AI agent requests a tool. What does the application record about the request? Can I tell which user it was acting for, whether the tool ran, and what came back? How much of that could I piece together later in Elastic?
 
-Before I could answer those questions, I had to build something that could produce the behavior in the first place. AdversaryLabAI grew out of that work. It includes a document retrieval app, a customer support agent, and a separate MCP server and client. All three run in AWS, use synthetic data, and send telemetry to Elastic Security.
+Before I could answer those questions, I had to build something that could produce the behavior in the first place. AdversaryLabAI grew out of that work. It includes a document retrieval app, a customer support agent, and a separate MCP server and client. I used synthetic data for all three and chose Elastic Security as the place to investigate activity across the lab.
 
 ![AdversaryLabAI architecture. The core AWS environment and document chat share an Elastic Agent on EC2. The customer support agent and MCP workload each use a dedicated Lambda to send events to Elastic Security.](assets/AdversaryLabAI.png)
 
 ## The core AWS environment
 
-The core lab has an Ubuntu research host on EC2. I use AWS Systems Manager to access it and Elastic Agent with Elastic Defend to collect process, file, and network activity. I also collect CloudTrail and VPC Flow Logs. Those logs land in S3, and the Elastic Agent uses SQS notifications to pick them up.
+I started with a VPC, an Ubuntu host on EC2, and a way to get the logs into a SIEM. I chose Elastic Serverless because I wanted to spend my time on the research. For a lab this size, paying for a managed service made more sense to me than maintaining the SIEM myself. I still had to decide what to collect and give the collector permission to read it.
 
-That gives me a starting point for investigating what happened on the host and in the AWS account. For questions about what a model was given or why a customer lookup was denied, I also needed records from the applications themselves.
+I use Systems Manager to access the host. If I want to know what ran there or which files a process touched, I start with Elastic Defend. If the question is which identity made an AWS API call, I look in CloudTrail. VPC Flow Logs give me a network view I can compare with the endpoint activity. The AWS logs land in S3, and Elastic Agent uses SQS notifications to pick them up.
+
+That covers a fair amount of ground until I ask what happened inside an application. Take a tool backed by Lambda. An execution log can tell me the function ran. If I want to know which tool the agent requested, whose access the application checked, or whether it returned a record, I need the application to record those decisions. One thing I still want to verify is how much of that detail survives the trip from CloudWatch to Elastic.
 
 ## The three workloads
 
@@ -28,7 +30,7 @@ That gives me a starting point for investigating what happened on the host and i
 
 I built deployment, verification, and cleanup into the project because I wanted to run an experiment, tear the environment down, and come back to the same setup later. Terraform and a set of scripts handle that work. I ran the release checks across two deployments of the same build. For the chat app, I can filter by deployment ID and request ID in Elastic to find the exact run, even if I’ve asked the same question a dozen times.
 
-In the next issue, I’ll take one MITRE ATLAS technique and walk through how I turned it into a lab requirement. From there, I’ll get into the individual workloads and share sanitized examples of what I could reconstruct from the evidence each one produced.
+I kept coming back to one question as I built the lab. If an agent requests a customer record, what would I need to see afterward to tell whether the employee actually received it? Working backward from questions like that helped me decide where each workload needed logging. It also gives me something concrete to check when I start comparing the behavior described in ATLAS with the evidence I can find in Elastic.
 
 See you in the next one 👋
 
