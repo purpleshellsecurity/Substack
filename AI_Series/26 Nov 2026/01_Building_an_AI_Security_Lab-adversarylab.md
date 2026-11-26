@@ -44,11 +44,9 @@ I still had to decide which events to collect and how they would get there. Clou
 
 ![Core logging architecture showing how AWS, host, and application events reach Elastic Security](assets/AdversaryLabAI-core.png)
 
-The piece I’d carry into another project is the application logging. I can collect AWS telemetry after deciding which services to deploy. To answer why the document chat excluded a passage or why a customer lookup returned a denial, I have to capture the decision where the application makes it. An investigator coming along later gets whatever I chose to record there.
+I built AdversaryLabAI so I’d have a place to run tests and write about what happened. When I cover a MITRE ATLAS technique in the newsletter, I want to be able to show you the application I tested, what I changed, and what showed up in Elastic.
 
-On the agent deployment I reviewed, CloudTrail failed to deliver the customer Lambda’s invocation events to CloudWatch. That left me without an independent check on whether the function ran. A missing event on that path tells me nothing about whether the employee’s lookup was allowed or denied.
-
-I started this lab because I wanted to know what an investigator could reconstruct after an AI application handled a request. In the next piece, I’ll start with the document chat and follow one question through Elastic, from the five passages the search returned to the four the application selected.
+The document chat gives me a way to do that with retrieved content. The customer agent lets me test access decisions, and the MCP client lets me change what a tool returns. This first issue lays out the environment. I’ll use it for demonstrations throughout the series.
 
 See you in the next one 👋
 
