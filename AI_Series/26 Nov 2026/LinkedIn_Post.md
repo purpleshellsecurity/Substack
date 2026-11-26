@@ -4,7 +4,7 @@ That’s one of the questions that shaped AdversaryLabAI. I wanted a repeatable 
 
 For the customer support agent, I kept the tool read-only. A single customer lookup was enough to study the part I cared about. A Lambda execution log could tell me the function ran. To follow the lookup, I’d also need to know which employee made the request, whose record they asked for, and what the application did after it checked their access.
 
-An allowed lookup and a denied lookup give me a baseline. Before I use that agent to test an ATLAS technique, I still need to define what behavior I’m looking for, which controls are active, and what evidence would let me call the result either way.
+The other workloads came from different questions. With document chat, I wanted to follow a passage from retrieval into the model request. With MCP, I wanted control over the tool description and the result the client received.
 
 I wrote up how I designed the lab, why I chose Elastic Serverless, and what I’m looking for in the telemetry. https://github.com/purpleshellsecurity/Substack/blob/main/AI_Series/26%20Nov%202026/01_Building_an_AI_Security_Lab.md
 
