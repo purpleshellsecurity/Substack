@@ -16,7 +16,7 @@ I started with a VPC, an Ubuntu host on EC2, and a way to get the logs into a SI
 
 I use Systems Manager to access the host. If I want to know what ran there or which files a process touched, I start with Elastic Defend. If the question is which identity made an AWS API call, I look in CloudTrail. VPC Flow Logs give me a network view I can compare with the endpoint activity. The AWS logs land in S3, and Elastic Agent uses SQS notifications to pick them up.
 
-That covers a fair amount of ground until I ask what happened inside an application. Take a tool backed by Lambda. An execution log can tell me the function ran. If I want to know which tool the agent requested, whose access the application checked, or whether it returned a record, I need the application to record those decisions. One thing I still want to verify is how much of that detail survives the trip from CloudWatch to Elastic.
+That covers a fair amount of ground until I ask what happened inside an application. Take a tool backed by Lambda. An execution log can tell me the function ran. If I want to know which tool the agent requested, whose access the application checked, or whether it returned a record, I need the application to record those decisions. That’s why I brought application events into Elastic alongside the Lambda execution logs.
 
 ## Why I chose these three workloads
 
@@ -28,13 +28,11 @@ I worked backward from the behaviors I wanted to study. To see what reached a mo
 
 **An MCP server and client.** Model Context Protocol (MCP) gives me another part of tool use to study. Here the client discovers a product lookup tool from a server I control. I can change the description the server publishes or the content it returns, then compare what the server sent with what the client received. Giving this workload its own product catalog lets me change those details without also changing the customer support agent.
 
-Building those capabilities gives me a starting point for a test. Take the customer lookup. An allowed request and a denied request give me a baseline for how authorization works. If I want to study a particular ATLAS technique, I still have to define the behavior that would count, record which controls are active, and decide what I’d compare across runs. Evidence that a tool received a request answers one question. I’d need a record of what came back to tell whether it returned customer data.
-
 ## Tearing it down and running it again
 
 I built deployment, verification, and cleanup into the project because I wanted to run an experiment, tear the environment down, and come back to the same setup later. Terraform and a set of scripts handle that work. I ran the release checks across two deployments of the same build. For the chat app, I can filter by deployment ID and request ID in Elastic to find the exact run, even if I’ve asked the same question a dozen times.
 
-I kept coming back to one question as I built the lab. If an agent requests a customer record, what would I need to see afterward to tell whether the employee actually received it? Working backward from questions like that helped me decide where each workload needed logging. It also gives me something concrete to check when I start comparing the behavior described in ATLAS with the evidence I can find in Elastic.
+I kept coming back to one question as I built the lab. If an agent requests a customer record, what would I need to see afterward to tell whether the employee actually received it? Working backward from questions like that helped me decide where each workload needed logging.
 
 See you in the next one 👋
 
