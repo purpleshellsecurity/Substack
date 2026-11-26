@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Lab architecture" id="lab">
+    <mxGraphModel page="1" pageWidth="860" pageHeight="772" background="#FAFAFD" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="label3" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=51;fontStyle=1;fontColor=#24243E;" value="AdversaryLabAI">
+          <mxGeometry as="geometry" x="41.0" y="17.57" width="800" height="63.24" />
+        </mxCell>
+        <mxCell id="label4" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=25;fontStyle=0;fontColor=#535469;" value="AI security research on AWS">
+          <mxGeometry as="geometry" x="43.0" y="80.75" width="800" height="31.0" />
+        </mxCell>
+        <mxCell id="card0" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=30;strokeColor=none;fillColor=#EEEBFD;container=1;recursiveResize=0;" value="">
+          <mxGeometry as="geometry" x="42" y="140" width="702" height="109" />
+        </mxCell>
+        <mxCell id="badge6" parent="card0" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=26;strokeColor=none;fillColor=#6551C9" value="">
+          <mxGeometry as="geometry" x="18" y="23" width="59" height="62" />
+        </mxCell>
+        <mxCell id="icon7" parent="card0" vertex="1" style="shape=image;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNiI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0iTTQgMmgxN2w3IDd2MjRINHogTTIwIDJ2OGg4IE05IDE3aDE0IE05IDIzaDE0IiAvPjwvZz48L3N2Zz4=;" value="">
+          <mxGeometry as="geometry" x="31" y="37" width="35" height="36" />
+        </mxCell>
+        <mxCell id="label8" parent="card0" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=27;fontStyle=1;fontColor=#24243E;" value="Document chat">
+          <mxGeometry as="geometry" x="97.0" y="9.889999999999997" width="720.0" height="33.48" />
+        </mxCell>
+        <mxCell id="label9" parent="card0" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#6551C9;" value="Bedrock Knowledge Base">
+          <mxGeometry as="geometry" x="97.0" y="45.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="label10" parent="card0" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#404156;" value="Which passages reach the model?">
+          <mxGeometry as="geometry" x="97.0" y="72.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="card1" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=30;strokeColor=none;fillColor=#E1F5F1;container=1;recursiveResize=0;" value="">
+          <mxGeometry as="geometry" x="42" y="264" width="702" height="109" />
+        </mxCell>
+        <mxCell id="badge14" parent="card1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=26;strokeColor=none;fillColor=#16756A" value="">
+          <mxGeometry as="geometry" x="18" y="23" width="59" height="62" />
+        </mxCell>
+        <mxCell id="icon15" parent="card1" vertex="1" style="shape=image;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNiI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHJlY3QgeD0iMiIgeT0iNyIgd2lkdGg9IjI5IiBoZWlnaHQ9IjIzIiByeD0iNSIgLz48cGF0aCBkPSJNMTYgMnY1IE0xMCAxNmgxIE0yMiAxNmgxIE0xMSAyM2gxMSIgLz48L2c+PC9zdmc+;" value="">
+          <mxGeometry as="geometry" x="31" y="37" width="35" height="36" />
+        </mxCell>
+        <mxCell id="label16" parent="card1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=27;fontStyle=1;fontColor=#24243E;" value="Customer support agent">
+          <mxGeometry as="geometry" x="97.0" y="9.889999999999997" width="720.0" height="33.48" />
+        </mxCell>
+        <mxCell id="label17" parent="card1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#16756A;" value="AgentCore · Cedar · customer lookup">
+          <mxGeometry as="geometry" x="97.0" y="45.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="label18" parent="card1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#404156;" value="Who can access a customer record?">
+          <mxGeometry as="geometry" x="97.0" y="72.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="card2" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=30;strokeColor=none;fillColor=#FFF0E0;container=1;recursiveResize=0;" value="">
+          <mxGeometry as="geometry" x="42" y="388" width="702" height="109" />
+        </mxCell>
+        <mxCell id="badge22" parent="card2" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=26;strokeColor=none;fillColor=#AB581D" value="">
+          <mxGeometry as="geometry" x="18" y="23" width="59" height="62" />
+        </mxCell>
+        <mxCell id="icon23" parent="card2" vertex="1" style="shape=image;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNiI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHBhdGggZD0ibTkgNy03IDEwIDcgOSBNMjQgN2w3IDEwLTcgOSBNMjAgNGwtNyAyNiIgLz48L2c+PC9zdmc+;" value="">
+          <mxGeometry as="geometry" x="31" y="37" width="35" height="36" />
+        </mxCell>
+        <mxCell id="label24" parent="card2" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=27;fontStyle=1;fontColor=#24243E;" value="MCP client and server">
+          <mxGeometry as="geometry" x="97.0" y="9.889999999999997" width="720.0" height="33.48" />
+        </mxCell>
+        <mxCell id="label25" parent="card2" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#AB581D;" value="Tool discovery · product lookup">
+          <mxGeometry as="geometry" x="97.0" y="45.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="label26" parent="card2" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#404156;" value="What does the client receive?">
+          <mxGeometry as="geometry" x="97.0" y="72.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="card3" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=30;strokeColor=none;fillColor=#E5EFFC;container=1;recursiveResize=0;" value="">
+          <mxGeometry as="geometry" x="42" y="512" width="702" height="109" />
+        </mxCell>
+        <mxCell id="badge30" parent="card3" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=26;strokeColor=none;fillColor=#35689E" value="">
+          <mxGeometry as="geometry" x="18" y="23" width="59" height="62" />
+        </mxCell>
+        <mxCell id="icon31" parent="card3" vertex="1" style="shape=image;aspect=fixed;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNSAzNiI+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIuMjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PHJlY3QgeD0iMiIgeT0iMyIgd2lkdGg9IjI5IiBoZWlnaHQ9IjEyIiByeD0iMyIgLz48cmVjdCB4PSIyIiB5PSIyMCIgd2lkdGg9IjI5IiBoZWlnaHQ9IjEyIiByeD0iMyIgLz48cGF0aCBkPSJNOCA5aDEgTTggMjZoMSBNMTYgOWg5IE0xNiAyNmg5IiAvPjwvZz48L3N2Zz4=;" value="">
+          <mxGeometry as="geometry" x="31" y="37" width="35" height="36" />
+        </mxCell>
+        <mxCell id="label32" parent="card3" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=27;fontStyle=1;fontColor=#24243E;" value="Core AWS environment">
+          <mxGeometry as="geometry" x="97.0" y="9.889999999999997" width="720.0" height="33.48" />
+        </mxCell>
+        <mxCell id="label33" parent="card3" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#35689E;" value="EC2 · CloudTrail · VPC Flow Logs">
+          <mxGeometry as="geometry" x="97.0" y="45.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="label34" parent="card3" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontStyle=0;fontColor=#404156;" value="What happened on the host and network?">
+          <mxGeometry as="geometry" x="97.0" y="72.4" width="720.0" height="24.8" />
+        </mxCell>
+        <mxCell id="card4" parent="1" vertex="1" style="rounded=1;absoluteArcSize=1;arcSize=30;strokeColor=none;fillColor=#282840;container=1;recursiveResize=0;" value="">
+          <mxGeometry as="geometry" x="42" y="677" width="766" height="66" />
+        </mxCell>
+        <mxCell id="label40" parent="card4" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=29;fontStyle=1;fontColor=#FFFFFF;" value="Elastic Security Serverless">
+          <mxGeometry as="geometry" x="21.0" y="15.029999999999998" width="796.0" height="35.96" />
+        </mxCell>
+        <mxCell id="label41" parent="card4" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontStyle=0;fontColor=#E2E1F2;" value="Host, cloud and application logs">
+          <mxGeometry as="geometry" x="461.0" y="23.33" width="356.0" height="23.56" />
+        </mxCell>
+        <mxCell id="junction0" parent="1" vertex="1" style="ellipse;strokeColor=none;fillColor=#686D87;" value="">
+          <mxGeometry as="geometry" x="782.5" y="189.5" width="9" height="9" />
+        </mxCell>
+        <mxCell id="branch0" parent="1" source="card0" target="junction0" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="junction1" parent="1" vertex="1" style="ellipse;strokeColor=none;fillColor=#686D87;" value="">
+          <mxGeometry as="geometry" x="782.5" y="313.5" width="9" height="9" />
+        </mxCell>
+        <mxCell id="branch1" parent="1" source="card1" target="junction1" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="bus1" parent="1" source="junction0" target="junction1" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="junction2" parent="1" vertex="1" style="ellipse;strokeColor=none;fillColor=#686D87;" value="">
+          <mxGeometry as="geometry" x="782.5" y="437.5" width="9" height="9" />
+        </mxCell>
+        <mxCell id="branch2" parent="1" source="card2" target="junction2" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="bus2" parent="1" source="junction1" target="junction2" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="junction3" parent="1" vertex="1" style="ellipse;strokeColor=none;fillColor=#686D87;" value="">
+          <mxGeometry as="geometry" x="782.5" y="561.5" width="9" height="9" />
+        </mxCell>
+        <mxCell id="branch3" parent="1" source="card3" target="junction3" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;exitX=1;exitY=0.5;entryX=0.5;entryY=0.5;entryPerimeter=0;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="bus3" parent="1" source="junction2" target="junction3" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=none;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="destination" parent="1" source="junction3" target="card4" edge="1" style="edgeStyle=none;strokeColor=#686D87;strokeWidth=3;endArrow=block;endFill=1;entryX=0.51;entryY=0;exitX=0.5;exitY=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="787" y="650" />
+              <mxPoint x="432.66" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
