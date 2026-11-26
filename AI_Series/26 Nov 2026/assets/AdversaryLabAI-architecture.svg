@@ -1,1 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="772" viewBox="0 0 860 772" role="img"><title>AdversaryLabAI research architecture</title><desc>Three AWS workloads and the core AWS environment send telemetry to Elastic Security Serverless.</desc><rect x="0" y="0" width="860" height="772" rx="0" fill="#FAFAFD"/><text x="42" y="65" font-family="Liberation Sans,Arial,sans-serif" font-size="51" font-weight="700" fill="#24243E">AdversaryLabAI</text><text x="44" y="104" font-family="Liberation Sans,Arial,sans-serif" font-size="25" font-weight="400" fill="#535469">AI security research on AWS</text><rect x="42" y="140" width="702" height="109" rx="15" fill="#EEEBFD"/><rect x="60" y="163" width="59" height="62" rx="13" fill="#6551C9"/><g transform="translate(73 177)" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h17l7 7v24H4z M20 2v8h8 M9 17h14 M9 23h14"/></g><text x="140" y="175" font-family="Liberation Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#24243E">Document chat</text><text x="140" y="204" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#6551C9">Bedrock Knowledge Base</text><text x="140" y="231" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#404156">Which passages reach the model?</text><path d="M744 194 H787" stroke="#80839B" stroke-width="3" fill="none"/><circle cx="787" cy="194" r="4.5" fill="#686D87"/><rect x="42" y="264" width="702" height="109" rx="15" fill="#E1F5F1"/><rect x="60" y="287" width="59" height="62" rx="13" fill="#16756A"/><g transform="translate(73 301)" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="29" height="23" rx="5"/><path d="M16 2v5 M10 16h1 M22 16h1 M11 23h11"/></g><text x="140" y="299" font-family="Liberation Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#24243E">Customer support agent</text><text x="140" y="328" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#16756A">AgentCore · Cedar · customer lookup</text><text x="140" y="355" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#404156">Who can access a customer record?</text><path d="M744 318 H787" stroke="#80839B" stroke-width="3" fill="none"/><circle cx="787" cy="318" r="4.5" fill="#686D87"/><rect x="42" y="388" width="702" height="109" rx="15" fill="#FFF0E0"/><rect x="60" y="411" width="59" height="62" rx="13" fill="#AB581D"/><g transform="translate(73 425)" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="m9 7-7 10 7 9 M24 7l7 10-7 9 M20 4l-7 26"/></g><text x="140" y="423" font-family="Liberation Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#24243E">MCP client and server</text><text x="140" y="452" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#AB581D">Tool discovery · product lookup</text><text x="140" y="479" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#404156">What does the client receive?</text><path d="M744 442 H787" stroke="#80839B" stroke-width="3" fill="none"/><circle cx="787" cy="442" r="4.5" fill="#686D87"/><rect x="42" y="512" width="702" height="109" rx="15" fill="#E5EFFC"/><rect x="60" y="535" width="59" height="62" rx="13" fill="#35689E"/><g transform="translate(73 549)" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="29" height="12" rx="3"/><rect x="2" y="20" width="29" height="12" rx="3"/><path d="M8 9h1 M8 26h1 M16 9h9 M16 26h9"/></g><text x="140" y="547" font-family="Liberation Sans,Arial,sans-serif" font-size="27" font-weight="700" fill="#24243E">Core AWS environment</text><text x="140" y="576" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#35689E">EC2 · CloudTrail · VPC Flow Logs</text><text x="140" y="603" font-family="Liberation Sans,Arial,sans-serif" font-size="20" font-weight="400" fill="#404156">What happened on the host and network?</text><path d="M744 566 H787" stroke="#80839B" stroke-width="3" fill="none"/><circle cx="787" cy="566" r="4.5" fill="#686D87"/><path d="M787 194 V640 Q787 650 777 650 H435 V670" fill="none" stroke="#686D87" stroke-width="3"/><path d="m428 667 7 10 7-10z" fill="#686D87"/><rect x="42" y="677" width="766" height="66" rx="14" fill="#282840"/><text x="64" y="719" font-family="Liberation Sans,Arial,sans-serif" font-size="29" font-weight="700" fill="#FFFFFF">Elastic Security Serverless</text><text x="504" y="718" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="400" fill="#E2E1F2">Host, cloud and application logs</text></svg>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="690" viewBox="0 0 1020 690">
+  <rect x="0" y="0" width="1020" height="690" fill="white" />
+  <text x="32" y="52" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="34" font-weight="700">AdversaryLabAI  /  Research environment</text>
+  <rect x="32" y="82" width="956" height="462" fill="#F8FAF9" stroke="#72837C" stroke-width="1.4" />
+  <text x="52" y="115" fill="#17675D" font-family="Liberation Sans,Arial,sans-serif" font-size="22" font-weight="700">AWS</text>
+  <text x="52" y="178" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Document chat</text>
+  <text x="52" y="271" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Support agent</text>
+  <text x="52" y="364" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">MCP</text>
+  <text x="52" y="457" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Base environment</text>
+  <rect x="225" y="149" width="182" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="237" y="173" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Chat application</text>
+  <text x="237" y="195" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Cognito sign-in</text>
+  <rect x="484" y="149" width="251" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="496" y="173" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Bedrock Knowledge Base</text>
+  <text x="496" y="195" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Passage retrieval</text>
+  <rect x="781" y="149" width="183" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="793" y="173" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Bedrock model</text>
+  <text x="793" y="195" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Selected context</text>
+  <polyline points="407,172 484,172" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="484,172 476.0,168.5 476.0,175.5" fill="#53746B" />
+  <polyline points="484,190 407,190" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="407,190 415.0,193.5 415.0,186.5" fill="#53746B" />
+  <polyline points="316,149 316,129 872,129 872,149" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="872,149 875.5,141.0 868.5,141.0" fill="#53746B" />
+  <rect x="225" y="242" width="182" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="237" y="266" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">AgentCore agent</text>
+  <text x="237" y="288" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Employee session</text>
+  <rect x="484" y="242" width="251" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="496" y="266" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">AgentCore Gateway</text>
+  <text x="496" y="288" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Cedar authorization</text>
+  <rect x="781" y="242" width="183" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="793" y="266" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Customer lookup</text>
+  <text x="793" y="288" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Read-only Lambda</text>
+  <polyline points="407,265 484,265" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="484,265 476.0,261.5 476.0,268.5" fill="#53746B" />
+  <polyline points="735,271 781,271" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="781,271 773.0,267.5 773.0,274.5" fill="#53746B" />
+  <rect x="225" y="335" width="182" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="237" y="359" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">MCP client</text>
+  <text x="237" y="381" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Tool discovery and calls</text>
+  <rect x="484" y="335" width="251" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="496" y="359" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">MCP server</text>
+  <text x="496" y="381" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Product lookup</text>
+  <polyline points="407,358 484,358" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="484,358 476.0,354.5 476.0,361.5" fill="#53746B" />
+  <polyline points="484,376 407,376" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="407,376 415.0,379.5 415.0,372.5" fill="#53746B" />
+  <rect x="225" y="428" width="182" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="237" y="452" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">EC2 / Ubuntu</text>
+  <text x="237" y="474" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">SSM access</text>
+  <rect x="484" y="428" width="251" height="59" fill="#FFFFFF" stroke="#8B9893" stroke-width="1.4" />
+  <text x="496" y="452" fill="#25332F" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Elastic Agent</text>
+  <text x="496" y="474" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="15" font-weight="400">Elastic Defend</text>
+  <polyline points="407,451 484,451" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="484,451 476.0,447.5 476.0,454.5" fill="#53746B" />
+  <text x="782" y="450" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="17" font-weight="400">CloudTrail</text>
+  <text x="782" y="474" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="17" font-weight="400">VPC Flow Logs</text>
+  <text x="52" y="521" fill="#17675D" font-family="Liberation Sans,Arial,sans-serif" font-size="19" font-weight="700">Telemetry collection</text>
+  <rect x="307" y="564" width="414" height="67" fill="#EEF5F2" stroke="#17675D" stroke-width="1.4" />
+  <polyline points="243,516 265,516 265,595 307,595" fill="none" stroke="#53746B" stroke-dasharray="6 4" stroke-width="1.6" />
+  <polygon points="307,595 299.0,591.5 299.0,598.5" fill="#53746B" />
+  <text x="324" y="593" fill="#17675D" font-family="Liberation Sans,Arial,sans-serif" font-size="23" font-weight="700">Elastic Security Serverless</text>
+  <text x="324" y="615" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="16" font-weight="400">Host, cloud and application events</text>
+  <polyline points="38,665 83,665" fill="none" stroke="#53746B" stroke-width="1.6" />
+  <polygon points="83,665 75.0,661.5 75.0,668.5" fill="#53746B" />
+  <text x="96" y="670" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="16" font-weight="400">Service interaction</text>
+  <polyline points="291,665 336,665" fill="none" stroke="#53746B" stroke-dasharray="6 4" stroke-width="1.6" />
+  <polygon points="336,665 328.0,661.5 328.0,668.5" fill="#53746B" />
+  <text x="350" y="670" fill="#51615D" font-family="Liberation Sans,Arial,sans-serif" font-size="16" font-weight="400">Telemetry</text>
+</svg>
