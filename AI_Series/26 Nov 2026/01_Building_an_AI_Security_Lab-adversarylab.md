@@ -1,12 +1,12 @@
-# What Would I Need to Investigate an AI Agent?
+# What Would It Take to Test MITRE ATLAS Techniques in a Lab?
 
-*How I designed AdversaryLabAI around three questions I wanted to answer in AWS and Elastic.*
+*Why I started with document chat, a customer support agent, and an MCP server, and what I can observe in Elastic.*
 
 When I read a technique in MITRE ATT&CK, I usually have two questions. How would I reproduce that behavior in my environment? If I did, what would show up in the logs?
 
 I wanted to take the same approach to MITRE ATLAS. Take a customer support agent. An employee asks it to look up a customer. The request succeeds. If someone asked me tomorrow whether that employee received the customer’s record, what would I need to pull up in Elastic to answer them?
 
-That question shaped how I built AdversaryLabAI. Before I picked the AWS services, I worked backward from the decisions I wanted to observe. I ended up with three small applications using synthetic data. Each gives me control over a different part of what happens between a user asking a question and a model returning an answer.
+My goal with AdversaryLabAI is to work through MITRE ATLAS technique by technique and map out what each one would require in a lab. What infrastructure has to exist for the behavior to occur? Which part of the application do I need to control, and where would I expect to see evidence? I started with three workloads that use synthetic data.
 
 ## Can I tell which documents made it into the model request?
 
@@ -44,9 +44,9 @@ I still had to decide which events to collect and how they would get there. Clou
 
 ![Core logging architecture showing how AWS, host, and application events reach Elastic Security](assets/AdversaryLabAI-core.png)
 
-I built AdversaryLabAI so I’d have a place to run tests and write about what happened. When I cover a MITRE ATLAS technique in the newsletter, I want to be able to show you the application I tested, what I changed, and what showed up in Elastic.
+These three workloads give me a starting point. As I work through ATLAS, some techniques will fit what I’ve already built. Others will call for a different application or infrastructure, and some may leave little I can observe from inside the lab. I want the mapping to capture those limits, too.
 
-The document chat gives me a way to do that with retrieved content. The customer agent lets me test access decisions, and the MCP client lets me change what a tool returns. This first issue lays out the environment. I’ll use it for demonstrations throughout the series.
+That’s where the newsletter comes in. For the techniques I can test, I’ll use the lab to show what the test required, what I ran, and what actually showed up in Elastic.
 
 See you in the next one 👋
 
