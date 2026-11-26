@@ -10,6 +10,6 @@ I wrote up how I designed the lab, why I chose Elastic Serverless, and what I’
 
 ---
 
-**Image to attach:** [AdversaryLabAI diagram](assets/AdversaryLabAI.png) · [Editable source](assets/AdversaryLabAI.drawio)
+**Image to attach:** [AdversaryLabAI diagram](assets/AdversaryLabAI-architecture.png) · [Editable source](assets/AdversaryLabAI-architecture.drawio)
 
-**Alt text:** The AWS research host and document chat share an Elastic Agent on EC2. The customer support agent and MCP workload each send CloudWatch logs through their own Lambda shipper. All three collection paths end in Elastic Security.
+**Alt text:** AWS architecture of AdversaryLabAI. The chat Lambda retrieves Bedrock Knowledge Base passages and submits selected context to a model. The support agent uses AgentCore Gateway and a customer lookup Lambda. The MCP client calls a separate product tool server. Cloud and application logs reach Elastic Security Serverless outside AWS.
