@@ -1,12 +1,14 @@
-# What Would It Take to Test MITRE ATLAS Techniques in a Lab?
+# You Gave Your AI Agent Access. Now Prove What It Did.
 
-*Why I started with document chat, a customer support agent, and an MCP server, and what I can observe in Elastic.*
+*Building an AWS and Elastic lab to test MITRE ATLAS techniques, trace application decisions, and find the limits of the evidence.*
 
-When I read a technique in MITRE ATT&CK, I usually have two questions. How would I reproduce that behavior in my environment? If I did, what would show up in the logs?
+An employee asks an AI agent to look up a customer. The application returns a response. If someone asked me tomorrow whether that employee received the customer’s record, what would I need to pull up in Elastic to answer them?
 
-I wanted to take the same approach to [MITRE ATLAS](https://atlas.mitre.org/). Take a customer support agent. An employee asks it to look up a customer. The application returns a response. If someone asked me tomorrow whether that employee received the customer’s record, what would I need to pull up in Elastic to answer them?
+I’d want to follow the request through the tool call, the access decisions, and the returned result. To investigate that sequence, I need an application that makes those decisions and records enough detail to examine them afterward.
 
-My goal with AdversaryLabAI is to work through MITRE ATLAS technique by technique and map out what each one would require in a lab. What infrastructure has to exist for the behavior to occur? Which part of the application do I need to control, and where would I expect to see evidence? I started with three workloads that use synthetic data.
+That’s where AdversaryLabAI starts. I’m taking the approach I use with MITRE ATT&CK and applying it to [MITRE ATLAS](https://atlas.mitre.org/): how would I reproduce the behavior, and what would show up in the logs?
+
+The broader goal is to work through ATLAS technique by technique and map what each one would require in a lab. What infrastructure has to exist? Which part of the application do I need to control? What evidence could I collect, and where would visibility be limited? I started with three workloads that use synthetic data.
 
 ## Can I tell which documents made it into the model request?
 
