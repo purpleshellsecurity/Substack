@@ -8,7 +8,7 @@ I wanted to take that same approach to AI security using MITRE ATLAS. Say an AI 
 
 Before I could answer those questions, I had to build something that could produce the behavior in the first place. AdversaryLabAI grew out of that work. It includes a document retrieval app, a customer support agent, and a separate MCP server and client. I used synthetic data for all three and chose Elastic Security as the place to investigate activity across the lab.
 
-![AdversaryLabAI architecture. The core AWS environment and document chat share an Elastic Agent on EC2. The customer support agent and MCP workload each use a dedicated Lambda to send events to Elastic Security.](assets/AdversaryLabAI.png)
+![AdversaryLabAI architecture. Document chat, a customer support agent, an MCP client and server, and the underlying AWS environment provide telemetry to Elastic Security Serverless.](assets/AdversaryLabAI-architecture.png)
 
 ## The core AWS environment
 
