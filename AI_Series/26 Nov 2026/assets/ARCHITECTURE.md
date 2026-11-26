@@ -1,6 +1,6 @@
 # How the three workloads work
 
-Open **AdversaryLabAI-architecture.drawio** in diagrams.net. It contains four editable pages:
+Open **AdversaryLabAI-architecture.drawio** in diagrams.net. It contains five editable pages:
 
 | Page | Walkthrough | Preview |
 | --- | --- | --- |
@@ -8,10 +8,19 @@ Open **AdversaryLabAI-architecture.drawio** in diagrams.net. It contains four ed
 | 2 · RAG | Sign-in, filtered retrieval, context selection and model response. | [PNG](AdversaryLabAI-rag.png) · [SVG](AdversaryLabAI-rag.svg) |
 | 3 · Customer agent | Employee identity, model handoff, Gateway policy and record access. | [PNG](AdversaryLabAI-agent.png) · [SVG](AdversaryLabAI-agent.svg) |
 | 4 · MCP | Discovery, model handoff, tool execution and result checks. | [PNG](AdversaryLabAI-mcp.png) · [SVG](AdversaryLabAI-mcp.svg) |
+| 5 · Core logging | All workload CloudWatch paths, base AWS/host telemetry, collectors and Elastic. | [PNG](AdversaryLabAI-core.png) · [SVG](AdversaryLabAI-core.svg) |
 
-Solid arrows represent requests and results; double-headed arrows summarize the return path. Dashed teal arrows represent telemetry delivery. Dashed amber arrows represent ingestion and embedding. Colour groups distinguish application code, AI services, access controls, storage and collection. Boxes that describe a check or workflow are explanatory notes, not additional deployed services.
+Solid arrows represent requests and results; double-headed arrows summarize the return path. Purple dashed connections without arrowheads attach a control to an API; WAF and authorizers are not drawn as forwarding proxy hops. Dashed teal arrows represent telemetry delivery. Dashed amber arrows represent ingestion and embedding. AWS icons identify services; the workload pages do not use explanatory cards. Rectangular boundaries identify the lab AWS account, not extra deployed services. The earlier overview retains its grouped presentation.
 
 The operator-side clients and Elastic are outside the AWS sandbox. Other named services are in AWS. The customer agent and MCP workload are independent of the RAG Knowledge Base and base collector. RAG uses the base collector.
+
+The overview separates Gateway from the customer lookup Lambda so tool permission and record permission are not collapsed into one box. On the agent page, DynamoDB is shown by its two uses: backend employee/session checks and tool employee/assignment/customer reads. These are views of the existing tables, not two new databases; the entitlements table is shared between the two checks. Harness calls the Bedrock model, while the backend calls Gateway.
+
+The RAG page separates verified clearance, passage selection and the configured model Guardrail. The MCP page distinguishes restricted and experimental catalogs and makes clear that validating a result’s format does not establish that its text contains no malicious instructions.
+
+The article embeds the RAG, customer-agent and MCP PNGs in their respective sections. The combined overview is retained as a separate reference. Workload diagrams show application request paths, attached controls and data dependencies. Their logging bands have been removed: the separate Core logging page shows RAG, agent and MCP CloudWatch sources, their collectors and the shared AWS/host telemetry path into Elastic. Detailed audit findings stay in this guide.
+
+The four workload/logging pages use a conventional architecture layout: standalone service icons, short service names, one-line descriptions and an AWS account boundary. The client and Elastic are outside the lab account. The earlier combined overview remains a separate reference. Official AWS architecture icons are embedded in the draw.io and SVG files, so they do not depend on external image links. The icons come from the [AWS architecture icon package](https://aws.amazon.com/architecture/icons/), release **31 July 2026**. Bedrock and AgentCore service icons identify their related components; the text distinguishes models, Knowledge Bases, Harness, Gateway and policy evaluation. Client applications, explanatory notes and Elastic are not marked as AWS services.
 
 ## The three workloads at a glance
 
@@ -147,7 +156,9 @@ Reviewed against private AdversaryLabAWS revision `e639b498763a2a61e7e88298ebf96
 
 These are walkthrough diagrams, not an exhaustive Terraform resource inventory. They group IAM policies, encryption, secrets and deployment records so the request paths remain readable. See the referenced Terraform and operator code for exact resources, conditions and lifecycle ownership.
 
-The pages describe implemented configuration. They do not certify live health, complete telemetry delivery, successful compromise or ATLAS technique coverage. At this review, the latest agent redeployment failed its native invocation-evidence check; CloudTrail reported `CannotAssumeRole` for CloudWatch delivery. The native logging path is therefore shown with a dated validation caveat. Earlier successful runs do not establish that this latest redeployment passed.
+The pages describe implemented configuration. They do not certify live health, complete telemetry delivery, successful compromise or ATLAS technique coverage. At this review, the latest agent redeployment failed its native invocation-evidence check; CloudTrail reported `CannotAssumeRole` for CloudWatch delivery. The native logging path describes intended configuration; the agent diagram directs readers here for its current delivery and verification limits. Earlier successful runs do not establish that this latest redeployment passed.
+
+Open audit items, recorded here rather than as large boxes in the article diagrams, include: RAG auxiliary-input and generic answer/identity evidence validation (C04/C05), agent invocation-stage/error attribution (C06), and credential-bearing runtime redirects (C09). These remain limitations of the shown implementation, not new controls or completed repairs. The other lifecycle and query findings remain in the separate remediation assessment; these pages are not a complete audit register.
 
 A retrieved passage is not necessarily submitted context. A model tool request is not proof of execution. Attack text reaching the model is not proof that the model followed it. Keep those distinctions when using the diagrams to explain experiments.
 
@@ -156,7 +167,7 @@ A retrieved passage is not necessarily submitted context. A model tool request i
 1. Edit the relevant page in `AdversaryLabAI-architecture.drawio`; update the overview only when relationships change.
 2. Check request direction, identity propagation, authorization, data access and log delivery against the referenced implementation. Update source tooltips when code moves.
 3. Keep explanatory notes separate from service boxes. Do not add an arrow solely because two services appear in the same Terraform stack.
-4. Export the changed page as its matching PNG and SVG, without cropping out its title, notes or revision. The newsletter references the overview PNG.
-5. Review all four pages for labels, crossings and stale claims. Update this review revision and any dated validation caveat only when supported by evidence.
+4. Export the changed page as its matching PNG and SVG, without cropping out its title, notes or revision. The newsletter references each workload PNG in its matching section and Core logging in the core-environment section; the overview remains a separate reference.
+5. Review all five pages for labels, crossings and stale claims. Update this review revision and any dated validation caveat only when supported by evidence.
 
 `AdversaryLabAI.drawio` is an older, separate sketch. It is retained unchanged; use **AdversaryLabAI-architecture.drawio** for this four-page walkthrough.
