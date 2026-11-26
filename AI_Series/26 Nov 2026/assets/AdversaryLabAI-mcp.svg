@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1320" viewBox="0 0 1600 1320">
+<rect width="100%" height="100%" fill="white"/>
+<defs>
+<marker id="request" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#243747"/></marker>
+<marker id="log" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087F82"/></marker>
+<marker id="prep" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B66A18"/></marker>
+</defs>
+<polyline points="430,385.0 650,385.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="240.0,470 240,705 650,705.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="1030,705.0 1170,705.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="530,1107.5 560,1107.5" fill="none" stroke="#087F82" stroke-width="2" marker-end="url(#log)" stroke-dasharray="8 6"/>
+<polyline points="1040,1107.5 1070,1107.5" fill="none" stroke="#087F82" stroke-width="2" marker-end="url(#log)" stroke-dasharray="8 6"/>
+<text x="50" y="57" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#243747">Separate MCP workload</text>
+<text x="50" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#243747">The operator-side client connects to both the MCP server and a dedicated Harness. The server does not call the model.</text>
+<text x="50" y="1286" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#243747">AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim</text>
+<rect x="50" y="300" width="380" height="170" rx="10" fill="#EEF4FC" stroke="#7393BE" stroke-width="1.5"/>
+<text x="240.0" y="331" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Operator-side MCP client</text>
+<text x="240.0" y="359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">1. Discover and validate tools</text>
+<text x="240.0" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">3. Execute approved model request</text>
+<text x="240.0" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">5. Check result and return to model</text>
+<rect x="650" y="300" width="380" height="170" rx="10" fill="#E9F6F3" stroke="#69A89C" stroke-width="1.5"/>
+<text x="840.0" y="331" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">AgentCore Runtime</text>
+<text x="840.0" y="359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">MCP server /mcp</text>
+<text x="840.0" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Tool catalog + lookup_product</text>
+<text x="840.0" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Synthetic product DEMO-001 only</text>
+<rect x="650" y="620" width="380" height="170" rx="10" fill="#E9F6F3" stroke="#69A89C" stroke-width="1.5"/>
+<text x="840.0" y="651" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Dedicated AgentCore Harness</text>
+<text x="840.0" y="679" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">2. Receive accepted tool definitions</text>
+<text x="840.0" y="702" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">4. Receive accepted tool result</text>
+<text x="840.0" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Return tool request or final answer</text>
+<rect x="1170" y="620" width="380" height="170" rx="10" fill="#E9F6F3" stroke="#69A89C" stroke-width="1.5"/>
+<text x="1360.0" y="651" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Bedrock model</text>
+<text x="1360.0" y="679" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Harness invokes configured model</text>
+<text x="1360.0" y="702" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Does not authenticate the caller</text>
+<text x="1360.0" y="725" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">or grant tool permissions</text>
+<rect x="50" y="145" width="1500" height="115" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="800.0" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">AWS access boundary</text>
+<text x="800.0" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Operator IAM / SigV4 for remote Runtime</text>
+<text x="800.0" y="227" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">and Harness calls. Separate service roles.</text>
+<text x="800.0" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">No employee Cognito or customer Gateway.</text>
+<rect x="1170" y="300" width="380" height="170" rx="10" fill="#FFF5E7" stroke="#D6AA6A" stroke-width="1.5"/>
+<text x="1360.0" y="331" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Controlled server variants</text>
+<text x="1360.0" y="359" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Baseline, poisoned description / result,</text>
+<text x="1360.0" y="382" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">and changed tool schema / catalog.</text>
+<text x="1360.0" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Server fixture changes independently.</text>
+<rect x="50" y="820" width="480" height="150" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="290.0" y="851" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Client enforcement</text>
+<text x="290.0" y="879" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Allowlisted tool / SKU and schema;</text>
+<text x="290.0" y="902" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">re-discover before call, reject changes;</text>
+<text x="290.0" y="925" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">check catalog / receipt / result agreement.</text>
+<rect x="560" y="820" width="480" height="150" rx="10" fill="#F5F7FA" stroke="#C8D1DA" stroke-width="1.5"/>
+<text x="800.0" y="851" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Experiment evidence</text>
+<text x="800.0" y="879" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Local request / result artifacts + hashes;</text>
+<text x="800.0" y="902" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">server receipt and completed model call;</text>
+<text x="800.0" y="925" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">check test phrase in the final answer.</text>
+<rect x="1070" y="820" width="480" height="150" rx="10" fill="#FFF5E7" stroke="#D6AA6A" stroke-width="1.5"/>
+<text x="1310.0" y="851" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Deployment support</text>
+<text x="1310.0" y="879" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">S3 holds versioned server code package.</text>
+<text x="1310.0" y="902" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Runtime fetches it for deployment.</text>
+<text x="1310.0" y="925" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">It is not a customer/product database.</text>
+<rect x="50" y="1040" width="480" height="135" rx="10" fill="#E9F6F7" stroke="#70A7AD" stroke-width="1.5"/>
+<text x="290.0" y="1071" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">CloudWatch Logs</text>
+<text x="290.0" y="1099" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Server + native Harness + published</text>
+<text x="290.0" y="1122" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">sanitized client events (full acceptance)</text>
+<rect x="560" y="1040" width="480" height="135" rx="10" fill="#E9F6F7" stroke="#70A7AD" stroke-width="1.5"/>
+<text x="800.0" y="1071" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Dedicated shipper Lambda</text>
+<text x="800.0" y="1099" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Three source subscriptions</text>
+<text x="800.0" y="1122" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Sanitize / forward allowlisted fields</text>
+<rect x="1070" y="1040" width="480" height="135" rx="10" fill="#E9F6F7" stroke="#70A7AD" stroke-width="1.5"/>
+<text x="1310.0" y="1071" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Elastic Security</text>
+<text x="1310.0" y="1099" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">MCP workload stream; correlate with</text>
+<text x="1310.0" y="1122" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">private experiment evidence</text>
+<text x="50" y="1221" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#243747">Attack text reaching the model and the model following it are separate observations. Local server hosting is also supported; this page shows AWS hosting. No writes, refunds or</text>
+<text x="50" y="1242" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#243747">customer access are implemented by this synthetic MCP tool.</text>
+<text x="540.0" y="375.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">discover / call / result</text>
+<text x="445.0" y="695.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">definitions, results / model turns</text>
+<text x="1100.0" y="695.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">inference</text>
+<text x="545.0" y="1097.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#087F82" stroke="white" stroke-width="6" paint-order="stroke">subscription</text>
+<text x="1055.0" y="1097.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#087F82" stroke="white" stroke-width="6" paint-order="stroke">delivery</text>
+</svg>

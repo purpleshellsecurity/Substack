@@ -1,373 +1,556 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net">
-  <diagram name="AWS architecture" id="aws">
-    <mxGraphModel page="1" pageWidth="1220" pageHeight="1040" background="#ffffff" grid="1">
+<mxfile host="app.diagrams.net" type="device" version="24.7.17">
+  <diagram id="overview" name="1 · Overview">
+    <mxGraphModel dx="1600" dy="1160" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1160" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="paper" parent="1" vertex="1" style="fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.5;" value="">
-          <mxGeometry as="geometry" x="0" y="0" width="1220" height="1040" />
+        <mxCell id="title" value="AdversaryLabAI" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=32;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="25" width="1500" height="48" />
         </mxCell>
-        <mxCell id="title" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=38;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="AdversaryLabAI">
-          <mxGeometry as="geometry" x="28" y="10" width="505.4" height="48.64" />
+        <mxCell id="subtitle" value="Three independently selectable workloads. Read left to right; use the following pages for access checks and return paths." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="82" width="1500" height="50" />
         </mxCell>
-        <mxCell id="sub" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=21;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="AWS workload architecture and telemetry collection">
-          <mxGeometry as="geometry" x="30" y="57" width="997.5" height="26.88" />
+        <mxCell id="footer" value="AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1112" width="1500" height="28" />
         </mxCell>
-        <mxCell id="cloud" parent="1" vertex="1" style="fillColor=#FFFFFF;strokeColor=#344658;strokeWidth=1.5;" value="">
-          <mxGeometry as="geometry" x="155" y="105" width="864" height="865" />
+        <mxCell id="raghead" value="DOCUMENT RETRIEVAL" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="155" width="1450" height="30" />
         </mxCell>
-        <mxCell id="cloudtag" parent="1" vertex="1" style="fillColor=#243647;strokeColor=#243647;strokeWidth=1.5;" value="">
-          <mxGeometry as="geometry" x="155" y="105" width="129" height="32" />
+        <object id="ruser" label="Signed-in user&#10;Cognito + REST API / WAF" tooltip="ai_lab/terraform/api_gateway.tf; ai_lab/terraform/waf.tf&#10;Cognito + REST API / WAF" source="ai_lab/terraform/api_gateway.tf; ai_lab/terraform/waf.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="210" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="rapp" label="Chat Lambda&#10;Filters and selects context" tooltip="ai_lab/src/chat/handler.py&#10;Filters and selects context" source="ai_lab/src/chat/handler.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="440" y="210" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="rkb" label="Knowledge Base&#10;S3 documents + S3 Vectors" tooltip="ai_lab/terraform/knowledge_base.tf&#10;S3 documents + S3 Vectors" source="ai_lab/terraform/knowledge_base.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="830" y="210" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="rmodel" label="Bedrock model&#10;Answer from selected context" tooltip="ai_lab/src/chat/handler.py:call_bedrock&#10;Answer from selected context" source="ai_lab/src/chat/handler.py:call_bedrock">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1220" y="210" width="330" height="110" />
+          </mxCell>
+        </object>
+        <mxCell id="r1" value="question" parent="1" edge="1" source="ruser" target="rapp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="awslabel" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=18;fontFamily=Arial;fontStyle=1;fontColor=#FFFFFF;" value="AWS Cloud">
-          <mxGeometry as="geometry" x="167" y="110" width="153.9" height="23.04" />
+        <mxCell id="r2" value="retrieve" parent="1" edge="1" source="rapp" target="rkb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="hr" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=19;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Document chat">
-          <mxGeometry as="geometry" x="180" y="149" width="234.64999999999998" height="24.32" />
-        </mxCell>
-        <mxCell id="c1" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="213" y="199" width="50" height="50" />
-        </mxCell>
-        <mxCell id="c1t0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Cognito">
-          <mxGeometry as="geometry" x="184.8" y="253" width="106.39999999999999" height="20.48" />
-        </mxCell>
-        <mxCell id="c1t1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Sign-in">
-          <mxGeometry as="geometry" x="191.45" y="274" width="93.1" height="17.92" />
-        </mxCell>
-        <mxCell id="api" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMISURBVHgB7Zs/aBRBFMa/FUFBSCqv0iKolTbGIminjWmOWGkabfxTprESUgZsFMEyYq9Wio1V7BQLrWInWNhpZSBFquQ+Xh432WySnd33dg9mfnDM3u7e7rxv3ns7b9grni1sbyNhjiFxsgBInCwAEicLgMTJAiBxjsOBs5eA+SXZfvUIrXi4Ku2XN8DPNZhjKsD0ALi5JAJYMTWQdn73ul9HQvz/CzNMBDhxCpgdAleGsr21Ka0lGyOjL96QD73hx0e5T1ta5wB2iG56bVGMZsfaun0Vb5fHIcB73Xsh925LYw+gO15dHLv7n3VxT7Ye0AM+vZTRv7MiocGwoBjvlpuHRbQAHGUaTncndMPPr30SVBUUgh7G0afxFOLBqty/SX6IEkAN1zinu383isVYaPCvb9If9ouC0BvZH/arLrUFYJxrRqab0x03DLNxEyg8Q2J9TbyBIly/L6LUzUO1BVDjGW9ecd4UzQ/sF/OC9rUO0U+BSTM+pEkecpkJhjx+L+3zW3u/x+zzJNcCcEZH9KDvR+3z9oRcDiNxsgCYAAYz6I3eBeD09e6oslt4gl7oTAAulswO9+/Xklan1TxnOmIm15ZOBKBBt1dknl4W4dyctCxieIzn8NyuRHAXQI3n/JyjzApO4eifHFWW/36Pj7GdGnQngrsAofFc1QkryPPB6JPwHBXBm06TYBFsc3RVgLDAKtAt7gKUR1Td+szuUpq6PSmHC3/rjbsAZbfWpKfJMMwJPHZQuHjhXgwRNejCnCxXcaQ5+eGKTljD61JW6BXedCIAoUGa7C5XjL4Ss55nQS8zQc0DXa0kH0ZnHhDy4Slwekae/33TWy0wCcaTXA4jcfKqMBInrwojcaIFsHgpwYsmfasdAlrM6EsJXi8tNSF8V4DE1BG1BSi/lDAJQlQZHtufqCTIC/PTtxAWhiuNngJ9CWFpuFJY/GWmqmO6XfWIi0Efg+E1LQxXTOYBVR5hja4UWXuY6USoLIQFmtG9QqvI/xpLnCwAEicLgMTJAiBxsgBInB0u6Dl5mu5b5wAAAABJRU5ErkJggg==;" value="">
-          <mxGeometry as="geometry" x="374" y="199" width="50" height="50" />
-        </mxCell>
-        <mxCell id="apit0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="API Gateway">
-          <mxGeometry as="geometry" x="315.4" y="253" width="167.2" height="20.48" />
-        </mxCell>
-        <mxCell id="apit1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Chat API">
-          <mxGeometry as="geometry" x="345.8" y="274" width="106.39999999999999" height="17.92" />
-        </mxCell>
-        <mxCell id="chat" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="555" y="199" width="50" height="50" />
-        </mxCell>
-        <mxCell id="chatt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Lambda">
-          <mxGeometry as="geometry" x="534.4" y="253" width="91.19999999999999" height="20.48" />
-        </mxCell>
-        <mxCell id="chatt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Chat handler">
-          <mxGeometry as="geometry" x="500.2" y="274" width="159.6" height="17.92" />
-        </mxCell>
-        <mxCell id="kb" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="835" y="175" width="50" height="50" />
-        </mxCell>
-        <mxCell id="kbt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Bedrock Knowledge Base">
-          <mxGeometry as="geometry" x="692.8" y="229" width="334.4" height="20.48" />
-        </mxCell>
-        <mxCell id="model" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="835" y="267" width="50" height="50" />
-        </mxCell>
-        <mxCell id="modelt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Bedrock model">
-          <mxGeometry as="geometry" x="761.2" y="321" width="197.6" height="20.48" />
-        </mxCell>
-        <mxCell id="login" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="c1" target="api">
+        <mxCell id="r3" value="selected context" parent="1" edge="1" source="rapp" target="rmodel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=0;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="263" y="224" as="sourcePoint" />
-            <mxPoint x="374" y="224" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="token1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=13;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="User token">
-          <mxGeometry as="geometry" x="275" y="199" width="123.5" height="16.64" />
-        </mxCell>
-        <mxCell id="invoke" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="api" target="chat">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="424" y="224" as="sourcePoint" />
-            <mxPoint x="555" y="224" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="retrieve" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;startArrow=block;startFill=1;exitX=1.0;exitY=0.38;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="chat" target="kb">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="605" y="218" as="sourcePoint" />
-            <mxPoint x="835" y="200" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="660" y="218" />
-              <mxPoint x="660" y="200" />
+              <mxPoint x="590" y="185" />
+              <mxPoint x="1385" y="185" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="send" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.62;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="chat" target="model">
+        <mxCell id="agenthead" value="CUSTOMER SUPPORT AGENT" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="355" width="1450" height="30" />
+        </mxCell>
+        <object id="auser" label="Employee&#10;Cognito + HTTP API" tooltip="agent_lab/terraform/identity.tf; agent_lab/terraform/api.tf&#10;Cognito + HTTP API" source="agent_lab/terraform/identity.tf; agent_lab/terraform/api.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="410" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="aback" label="Backend Lambda&#10;Calls Harness and Gateway" tooltip="agent_lab/src/agent_app/backend.py&#10;Calls Harness and Gateway" source="agent_lab/src/agent_app/backend.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="440" y="410" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="aharness" label="AgentCore Harness&#10;Model proposes get_customer" tooltip="agent_lab/terraform/agent.tf&#10;Model proposes get_customer" source="agent_lab/terraform/agent.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="830" y="410" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="agate" label="Gateway + tool&#10;Identity, Cedar, assignment&#10;Customer / access tables" tooltip="agent_lab/src/agent_app/interceptor.py; agent_lab/src/agent_app/customer.py; agent_lab/terraform/agent.tf&#10;Identity, Cedar, assignment&#10;Customer / access tables" source="agent_lab/src/agent_app/interceptor.py; agent_lab/src/agent_app/customer.py; agent_lab/terraform/agent.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1220" y="410" width="330" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="a1" value="request" parent="1" edge="1" source="auser" target="aback" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a2" value="turns" parent="1" edge="1" source="aback" target="aharness" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="a3" value="tool call / result" parent="1" edge="1" source="aback" target="agate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="605" y="230" as="sourcePoint" />
-            <mxPoint x="835" y="292" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="676" y="230" />
-              <mxPoint x="676" y="292" />
+              <mxPoint x="590" y="575" />
+              <mxPoint x="1385" y="575" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="rlab" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Retrieve passages">
-          <mxGeometry as="geometry" x="700" y="175" width="226.1" height="17.92" />
+        <mxCell id="mcphead" value="SEPARATE MCP WORKLOAD" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="625" width="1450" height="30" />
         </mxCell>
-        <mxCell id="mlab" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Selected context">
-          <mxGeometry as="geometry" x="696" y="268" width="212.79999999999998" height="17.92" />
+        <object id="mclient" label="Operator-side client&#10;IAM-authenticated requests" tooltip="mcp_lab/client.py; mcp_lab/runtime_client.py&#10;IAM-authenticated requests" source="mcp_lab/client.py; mcp_lab/runtime_client.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="680" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="mserver" label="AgentCore Runtime&#10;Synthetic MCP product server" tooltip="mcp_lab/server.py; mcp_lab/terraform/main.tf&#10;Synthetic MCP product server" source="mcp_lab/server.py; mcp_lab/terraform/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="440" y="680" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="mharness" label="Dedicated Harness&#10;Accepted tools + model turns" tooltip="mcp_lab/harness.py&#10;Accepted tools + model turns" source="mcp_lab/harness.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="830" y="680" width="300" height="110" />
+          </mxCell>
+        </object>
+        <object id="support" label="Shared support&#10;IAM roles, KMS and secrets&#10;State + ownership records" tooltip="adversarylab/operations.py; scripts/agent_apply.py; mcp_lab/deployment.py&#10;IAM roles, KMS and secrets&#10;State + ownership records" source="adversarylab/operations.py; scripts/agent_apply.py; mcp_lab/deployment.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1220" y="680" width="330" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="m1" value="MCP" parent="1" edge="1" source="mclient" target="mserver" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="ha" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=19;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Customer support agent">
-          <mxGeometry as="geometry" x="180" y="370" width="397.09999999999997" height="24.32" />
-        </mxCell>
-        <mxCell id="linea" parent="1" vertex="1" style="fillColor=#D0D8DD;strokeColor=none;" value="">
-          <mxGeometry as="geometry" x="171" y="363" width="831" height="1" />
-        </mxCell>
-        <mxCell id="c2" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="213" y="416" width="50" height="50" />
-        </mxCell>
-        <mxCell id="c2t0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Cognito">
-          <mxGeometry as="geometry" x="184.8" y="470" width="106.39999999999999" height="20.48" />
-        </mxCell>
-        <mxCell id="c2t1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Employee sign-in">
-          <mxGeometry as="geometry" x="131.60000000000002" y="491" width="212.79999999999998" height="17.92" />
-        </mxCell>
-        <mxCell id="back" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="375" y="416" width="50" height="50" />
-        </mxCell>
-        <mxCell id="backt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Backend">
-          <mxGeometry as="geometry" x="346.8" y="470" width="106.39999999999999" height="20.48" />
-        </mxCell>
-        <mxCell id="backt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Verified identity">
-          <mxGeometry as="geometry" x="286.95" y="491" width="226.1" height="17.92" />
-        </mxCell>
-        <mxCell id="har" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="540" y="416" width="50" height="50" />
-        </mxCell>
-        <mxCell id="hart0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="AgentCore Harness">
-          <mxGeometry as="geometry" x="435.8" y="470" width="258.4" height="20.48" />
-        </mxCell>
-        <mxCell id="hart1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Tool request">
-          <mxGeometry as="geometry" x="485.2" y="491" width="159.6" height="17.92" />
-        </mxCell>
-        <mxCell id="gw" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="725" y="416" width="50" height="50" />
-        </mxCell>
-        <mxCell id="gwt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="AgentCore Gateway">
-          <mxGeometry as="geometry" x="620.8" y="470" width="258.4" height="20.48" />
-        </mxCell>
-        <mxCell id="gwt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Interceptor + Cedar">
-          <mxGeometry as="geometry" x="623.65" y="491" width="252.7" height="17.92" />
-        </mxCell>
-        <mxCell id="tool" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="905" y="416" width="50" height="50" />
-        </mxCell>
-        <mxCell id="toolt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Customer lookup">
-          <mxGeometry as="geometry" x="816.0" y="470" width="228.0" height="20.48" />
-        </mxCell>
-        <mxCell id="toolt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Assignment check">
-          <mxGeometry as="geometry" x="823.6" y="491" width="212.79999999999998" height="17.92" />
-        </mxCell>
-        <mxCell id="c2back" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="c2" target="back">
+        <mxCell id="m2" value="model requests / results" parent="1" edge="1" source="mclient" target="mharness" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="263" y="441" as="sourcePoint" />
-            <mxPoint x="375" y="441" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="backhar" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="back" target="har">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="425" y="441" as="sourcePoint" />
-            <mxPoint x="540" y="441" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="hargw" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="har" target="gw">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="590" y="441" as="sourcePoint" />
-            <mxPoint x="725" y="441" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="gwtool" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;exitX=1.0;exitY=0.5;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="gw" target="tool">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="775" y="441" as="sourcePoint" />
-            <mxPoint x="905" y="441" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="token2" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=13;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="User token">
-          <mxGeometry as="geometry" x="274" y="417" width="123.5" height="16.64" />
-        </mxCell>
-        <mxCell id="hm" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=19;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="MCP workload">
-          <mxGeometry as="geometry" x="180" y="548" width="216.6" height="24.32" />
-        </mxCell>
-        <mxCell id="linem" parent="1" vertex="1" style="fillColor=#D0D8DD;strokeColor=none;" value="">
-          <mxGeometry as="geometry" x="171" y="541" width="831" height="1" />
-        </mxCell>
-        <mxCell id="operator" parent="1" vertex="1" style="fillColor=#F7F9FA;strokeColor=#84939D;strokeWidth=1.5;" value="">
-          <mxGeometry as="geometry" x="16" y="592" width="122" height="59" />
-        </mxCell>
-        <mxCell id="op1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="MCP client">
-          <mxGeometry as="geometry" x="1.0" y="601" width="152.0" height="20.48" />
-        </mxCell>
-        <mxCell id="op2" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=13;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Operator IAM">
-          <mxGeometry as="geometry" x="2.9000000000000057" y="625" width="148.2" height="16.64" />
-        </mxCell>
-        <mxCell id="serv" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="375" y="568" width="50" height="50" />
-        </mxCell>
-        <mxCell id="servt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="AgentCore Runtime">
-          <mxGeometry as="geometry" x="270.8" y="622" width="258.4" height="20.48" />
-        </mxCell>
-        <mxCell id="servt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Product tool server">
-          <mxGeometry as="geometry" x="273.65" y="643" width="252.7" height="17.92" />
-        </mxCell>
-        <mxCell id="mh" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="733" y="602" width="50" height="50" />
-        </mxCell>
-        <mxCell id="mht0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="AgentCore Harness">
-          <mxGeometry as="geometry" x="628.8" y="656" width="258.4" height="20.48" />
-        </mxCell>
-        <mxCell id="mht1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Managed model calls">
-          <mxGeometry as="geometry" x="631.65" y="677" width="252.7" height="17.92" />
-        </mxCell>
-        <mxCell id="m1" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;startArrow=block;startFill=1;entryX=0.0;entryY=0.5;entryPerimeter=0;" target="serv">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="138" y="608" as="sourcePoint" />
-            <mxPoint x="375" y="593" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="300" y="608" />
-              <mxPoint x="300" y="593" />
+              <mxPoint x="200" y="825" />
+              <mxPoint x="980" y="825" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="m2" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;entryX=0.0;entryY=0.5;entryPerimeter=0;" target="mh">
+        <mxCell id="sharedhead" value="SHARED COLLECTION AND OPERATIONS" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="875" width="1450" height="30" />
+        </mxCell>
+        <object id="base" label="Base EC2 + Elastic Agent&#10;RAG CloudWatch + host events&#10;CloudTrail / Flow Logs: S3 → SQS&#10;Scoped SSM output: CloudWatch" tooltip="infrastructure/modules/telemetry/main.tf; infrastructure/modules/endpoint-host/main.tf; docs/logging/BASE.md&#10;RAG CloudWatch + host events&#10;CloudTrail / Flow Logs: S3 → SQS&#10;Scoped SSM output: CloudWatch" source="infrastructure/modules/telemetry/main.tf; infrastructure/modules/endpoint-host/main.tf; docs/logging/BASE.md">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="925" width="480" height="135" />
+          </mxCell>
+        </object>
+        <object id="ships" label="Dedicated Lambda shippers&#10;Agent and MCP CloudWatch → Elastic&#10;Agent native audit has its own forwarder" tooltip="agent_lab/terraform/logging.tf; mcp_lab/terraform/elastic.tf; agent_lab/policy_audit/forwarding/main.tf&#10;Agent and MCP CloudWatch → Elastic&#10;Agent native audit has its own forwarder" source="agent_lab/terraform/logging.tf; mcp_lab/terraform/elastic.tf; agent_lab/policy_audit/forwarding/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="585" y="925" width="480" height="135" />
+          </mxCell>
+        </object>
+        <object id="elastic" label="Elastic Security&#10;Independent workload streams&#10;AWS and application telemetry" tooltip="docs/LOGGING_GUIDE.md&#10;Independent workload streams&#10;AWS and application telemetry" source="docs/LOGGING_GUIDE.md">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1120" y="925" width="430" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="sharedlogs" value="delivery" parent="1" edge="1" source="ships" target="elastic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="baselogs" value="base + RAG telemetry" parent="1" edge="1" source="base" target="elastic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=1;dashed=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="138" y="635" as="sourcePoint" />
-            <mxPoint x="733" y="627" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="285" y="635" />
-              <mxPoint x="285" y="680" />
-              <mxPoint x="611" y="680" />
-              <mxPoint x="611" y="627" />
+              <mxPoint x="290" y="1080" />
+              <mxPoint x="1335" y="1080" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="m1t" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Discover / call">
-          <mxGeometry as="geometry" x="179" y="582" width="199.5" height="17.92" />
+        <mxCell id="legend" value="Solid arrows: requests / results     Dashed teal: telemetry     Dashed amber: ingestion / embedding     AWS services run in the sandbox; the operator client and Elastic are outside it." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=15;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1090" width="1500" height="30" />
         </mxCell>
-        <mxCell id="m2t" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Selected tool information">
-          <mxGeometry as="geometry" x="365" y="687" width="332.5" height="17.92" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="rag" name="2 · RAG">
+    <mxGraphModel dx="1600" dy="1260" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1260" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Document retrieval" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=32;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="25" width="1500" height="48" />
         </mxCell>
-        <mxCell id="hl" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=19;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Telemetry collection">
-          <mxGeometry as="geometry" x="180" y="724" width="361.0" height="24.32" />
+        <mxCell id="subtitle" value="Defended mode shown. The chat Lambda controls retrieval, context selection and the separate model call." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="82" width="1500" height="50" />
         </mxCell>
-        <mxCell id="linel" parent="1" vertex="1" style="fillColor=#D0D8DD;strokeColor=none;" value="">
-          <mxGeometry as="geometry" x="171" y="717" width="831" height="1" />
+        <mxCell id="footer" value="AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1212" width="1500" height="28" />
         </mxCell>
-        <mxCell id="cw" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="235" y="773" width="50" height="50" />
+        <object id="user" label="User / chat client&#10;Signs in; sends question,&#10;bearer token and API key" tooltip="ai_lab/terraform/cognito.tf; ai_lab/terraform/api_gateway.tf&#10;Signs in; sends question,&#10;bearer token and API key" source="ai_lab/terraform/cognito.tf; ai_lab/terraform/api_gateway.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="250" width="270" height="135" />
+          </mxCell>
+        </object>
+        <object id="cognito" label="Amazon Cognito&#10;Issues token with clearance" tooltip="ai_lab/terraform/cognito.tf; ai_lab/src/chat/handler.py:resolve_identity&#10;Issues token with clearance" source="ai_lab/terraform/cognito.tf; ai_lab/src/chat/handler.py:resolve_identity">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="140" width="270" height="100" />
+          </mxCell>
+        </object>
+        <mxCell id="login" value="sign-in / token" parent="1" edge="1" source="user" target="cognito" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="cwt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="CloudWatch Logs">
-          <mxGeometry as="geometry" x="146.0" y="827" width="228.0" height="20.48" />
+        <object id="api" label="REST API + WAF&#10;Cognito authorizer; usage plan&#10;WAF and configured edge policy" tooltip="ai_lab/terraform/api_gateway.tf; ai_lab/terraform/waf.tf&#10;Cognito authorizer; usage plan&#10;WAF and configured edge policy" source="ai_lab/terraform/api_gateway.tf; ai_lab/terraform/waf.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="420" y="250" width="300" height="135" />
+          </mxCell>
+        </object>
+        <object id="lambda" label="Chat Lambda&#10;1. Verify claims and clearance&#10;2. Filter and validate retrieval&#10;3. Screen / select context" tooltip="ai_lab/src/chat/handler.py:resolve_identity,retrieve_documents,lambda_handler&#10;1. Verify claims and clearance&#10;2. Filter and validate retrieval&#10;3. Screen / select context" source="ai_lab/src/chat/handler.py:resolve_identity,retrieve_documents,lambda_handler">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="820" y="250" width="310" height="160" />
+          </mxCell>
+        </object>
+        <object id="model" label="Bedrock model&#10;Converse with selected context&#10;Guardrail attached when enabled" tooltip="ai_lab/src/chat/handler.py:call_bedrock; ai_lab/terraform/bedrock_guardrail.tf&#10;Converse with selected context&#10;Guardrail attached when enabled" source="ai_lab/src/chat/handler.py:call_bedrock; ai_lab/terraform/bedrock_guardrail.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1230" y="250" width="320" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="uapi" value="chat" parent="1" edge="1" source="user" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="ship" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,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;" value="">
-          <mxGeometry as="geometry" x="729" y="758" width="50" height="50" />
-        </mxCell>
-        <mxCell id="shipt0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Dedicated shippers">
-          <mxGeometry as="geometry" x="617.2" y="812" width="273.59999999999997" height="20.48" />
-        </mxCell>
-        <mxCell id="shipt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Agent and MCP">
-          <mxGeometry as="geometry" x="667.55" y="833" width="172.9" height="17.92" />
-        </mxCell>
-        <mxCell id="collector" parent="1" vertex="1" style="shape=image;aspect=fixed;image=data:image/png,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAQKADAAQAAAABAAAAQAAAAABGUUKwAAACH0lEQVRoBe1ZvU7DMBBOECqULPy8CSsDM2ysPAIDUlkrJsQKUgcegZUNZgZW3qTAEgpdwkknnSKQz8l9dkoUVx3SOvf5+zm7cprPJ1mvX2u9Zk/kk4BVJ5gSSAmADqQWAg2Ey3ufwDpsgRNgtH9anMzyYs95h2+gKuflw/ny9V65MWICIHsiTeIJRGFPQxETYO/fLnKdgTK6e1N5A4yYgMIs4FASENBME1TENYB0f3MtqYWyjPYKeotn9Y9NrqXQdpESsPkWripHDvWbh5Px0VU+Kmx8qmW5eLr8er51lXNn6psB1EIIeyJNygnBxb7h98ZttL5qdYcUHgRCGgTKhgMloJDrbMiYALsl5iF0bcbLjENNIIj37KJA2aIYagL/Zw14FvHfc60taFlzwS88AlznWmlcnJBA2azxCMDPtW0Vih4upAcTOoJHgKu4mzXAj1VcHPh7owAdFBlt20hD3UZ/dSpiuUC19Z4nHWoC3SziJsEONQFp3CYm6fcIlG0NBNhGhYFONNKoUQC7tXFwtnV8nY+3beSqxcfn4/T75c5WzlVGAVxMc9ObE5AGqH/Ur9+nOwh1ru39Iu69AM+DrXoP4HHHQOh9AtEFUIYcYwz7CTO6gEi8BTYJECtWdOH5IaNDHR2LwSb2nmsR7Z4Won/6wembnGsRAZ7fAQS6m1pPAt2QQGZJAhD3QtSmBEK4iGCkBBD3QtSmBEK4iGD8AFyRp1CC4bwgAAAAAElFTkSuQmCC;" value="">
-          <mxGeometry as="geometry" x="729" y="883" width="50" height="50" />
-        </mxCell>
-        <mxCell id="collectort0" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="EC2 · Elastic Agent">
-          <mxGeometry as="geometry" x="609.6" y="937" width="288.8" height="20.48" />
-        </mxCell>
-        <mxCell id="d1" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;exitX=1.0;exitY=0.38;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="cw" target="ship">
+        <mxCell id="apil" value="claims" parent="1" edge="1" source="api" target="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="285" y="792" as="sourcePoint" />
-            <mxPoint x="729" y="783" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="433" y="792" />
-              <mxPoint x="433" y="783" />
+              <mxPoint x="770.0" y="317.5" />
+              <mxPoint x="770.0" y="330.0" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="d2" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;exitX=1.0;exitY=0.62;exitPerimeter=0;entryX=0.0;entryY=0.5;entryPerimeter=0;" source="cw" target="collector">
+        <mxCell id="lm" value="context" parent="1" edge="1" source="lambda" target="model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="285" y="804" as="sourcePoint" />
-            <mxPoint x="729" y="908" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="454" y="804" />
-              <mxPoint x="454" y="842" />
-              <mxPoint x="680" y="842" />
-              <mxPoint x="680" y="908" />
+              <mxPoint x="1180.0" y="330.0" />
+              <mxPoint x="1180.0" y="317.5" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dl1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Agent and MCP log groups">
-          <mxGeometry as="geometry" x="487" y="761" width="319.2" height="17.92" />
+        <object id="s3" label="S3 corpus bucket&#10;Synthetic documents + metadata&#10;Manifest read by chat Lambda" tooltip="ai_lab/terraform/s3_corpus.tf; ai_lab/src/chat/handler.py:get_manifest&#10;Synthetic documents + metadata&#10;Manifest read by chat Lambda" source="ai_lab/terraform/s3_corpus.tf; ai_lab/src/chat/handler.py:get_manifest">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="560" width="300" height="135" />
+          </mxCell>
+        </object>
+        <object id="kb" label="Bedrock Knowledge Base&#10;Retrieve: query → ranked passages&#10;Classification filter from Lambda" tooltip="ai_lab/terraform/knowledge_base.tf; ai_lab/src/chat/handler.py:retrieve_documents&#10;Retrieve: query → ranked passages&#10;Classification filter from Lambda" source="ai_lab/terraform/knowledge_base.tf; ai_lab/src/chat/handler.py:retrieve_documents">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="820" y="520" width="310" height="135" />
+          </mxCell>
+        </object>
+        <object id="vectors" label="Amazon S3 Vectors&#10;1024-dimension cosine index&#10;Stores vectors + passage metadata" tooltip="ai_lab/terraform/knowledge_base.tf&#10;1024-dimension cosine index&#10;Stores vectors + passage metadata" source="ai_lab/terraform/knowledge_base.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1230" y="520" width="320" height="135" />
+          </mxCell>
+        </object>
+        <object id="titan" label="Titan Embeddings V2&#10;Embeds documents and queries&#10;KB service role invokes the model" tooltip="ai_lab/terraform/knowledge_base.tf&#10;Embeds documents and queries&#10;KB service role invokes the model" source="ai_lab/terraform/knowledge_base.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="430" y="560" width="300" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="lkb" value="filtered query / passages" parent="1" edge="1" source="lambda" target="kb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="dl2" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Document chat log groups">
-          <mxGeometry as="geometry" x="468" y="822" width="319.2" height="17.92" />
+        <mxCell id="vquery" value="vector search" parent="1" edge="1" source="kb" target="vectors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="core" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="CloudTrail / VPC Flow Logs">
-          <mxGeometry as="geometry" x="179" y="909" width="345.8" height="17.92" />
-        </mxCell>
-        <mxCell id="sourceToS3" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;">
+        <mxCell id="s3kb" value="ingestion" parent="1" edge="1" source="s3" target="kb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#B66A18;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#B66A18;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0;entryY=0.5;dashed=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="376" y="918" as="sourcePoint" />
-            <mxPoint x="431" y="918" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="s3q" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=14;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="S3 objects / SQS notifications">
-          <mxGeometry as="geometry" x="448" y="909" width="399.0" height="17.92" />
-        </mxCell>
-        <mxCell id="d3" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;entryX=0.0;entryY=0.62;entryPerimeter=0;" target="collector">
-          <mxGeometry as="geometry" relative="1">
-            <mxPoint x="661" y="918" as="sourcePoint" />
-            <mxPoint x="729" y="914" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="683" y="918" />
-              <mxPoint x="683" y="914" />
+              <mxPoint x="200" y="475" />
+              <mxPoint x="760" y="475" />
+              <mxPoint x="760" y="587" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="elastic" parent="1" vertex="1" style="fillColor=#F2F8F7;strokeColor=#37837C;strokeWidth=1.5;" value="">
-          <mxGeometry as="geometry" x="1040" y="803" width="166" height="66" />
-        </mxCell>
-        <mxCell id="el1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=17;fontFamily=Arial;fontStyle=1;fontColor=#263747;" value="Elastic Security">
-          <mxGeometry as="geometry" x="993.8" y="812" width="258.4" height="21.76" />
-        </mxCell>
-        <mxCell id="el2" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacing=0;fontSize=16;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Serverless">
-          <mxGeometry as="geometry" x="1047.0" y="836" width="152.0" height="20.48" />
-        </mxCell>
-        <mxCell id="del1" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;exitX=1.0;exitY=0.5;exitPerimeter=0;" source="ship">
+        <mxCell id="embed" value="embedding calls" parent="1" edge="1" source="kb" target="titan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#B66A18;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#B66A18;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=1;entryY=0.5;dashed=1;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="779" y="783" as="sourcePoint" />
-            <mxPoint x="1040" y="819" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="995" y="783" />
-              <mxPoint x="995" y="819" />
+              <mxPoint x="975" y="735" />
+              <mxPoint x="775" y="735" />
+              <mxPoint x="775" y="627" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="del2" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;exitX=1.0;exitY=0.5;exitPerimeter=0;" source="collector">
+        <mxCell id="manifest" value="manifest" parent="1" edge="1" source="s3" target="lambda" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0;entryY=0.5;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="779" y="908" as="sourcePoint" />
-            <mxPoint x="1040" y="850" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="1006" y="908" />
-              <mxPoint x="1006" y="850" />
+              <mxPoint x="200" y="440" />
+              <mxPoint x="780" y="440" />
+              <mxPoint x="780" y="330" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="leg1" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#475767;">
+        <mxCell id="rcontrols" value="WHAT THE APPLICATION DECIDES" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="775" width="1450" height="30" />
+        </mxCell>
+        <object id="c1" label="Authorization&#10;Allowlisted classifications at retrieval;&#10;validate source and classification again.&#10;Department is not an access rule." tooltip="ai_lab/src/chat/handler.py:retrieval_filter,retrieve_documents&#10;Allowlisted classifications at retrieval;&#10;validate source and classification again.&#10;Department is not an access rule." source="ai_lab/src/chat/handler.py:retrieval_filter,retrieve_documents">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="820" width="460" height="150" />
+          </mxCell>
+        </object>
+        <object id="c2" label="Context selection&#10;Injection-pattern quarantine + size budget.&#10;included_in_context records selection.&#10;No usable context → model not called." tooltip="ai_lab/src/chat/handler.py:scan_for_injection,lambda_handler&#10;Injection-pattern quarantine + size budget.&#10;included_in_context records selection.&#10;No usable context → model not called." source="ai_lab/src/chat/handler.py:scan_for_injection,lambda_handler">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="565" y="820" width="465" height="150" />
+          </mxCell>
+        </object>
+        <object id="c3" label="Experiment modes&#10;Controls-off omits auth / clearance&#10;filtering, quarantine and model Guardrail.&#10;Source validation and budget remain." tooltip="ai_lab/src/chat/handler.py; ai_lab/terraform/api_gateway.tf&#10;Controls-off omits auth / clearance&#10;filtering, quarantine and model Guardrail.&#10;Source validation and budget remain." source="ai_lab/src/chat/handler.py; ai_lab/terraform/api_gateway.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1085" y="820" width="465" height="150" />
+          </mxCell>
+        </object>
+        <object id="cw" label="CloudWatch Logs&#10;Chat application + API access + WAF" tooltip="ai_lab/terraform/logging.tf; docs/logging/RAG.md&#10;Chat application + API access + WAF" source="ai_lab/terraform/logging.tf; docs/logging/RAG.md">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="1025" width="460" height="110" />
+          </mxCell>
+        </object>
+        <object id="collector" label="Base EC2 Elastic Agent&#10;Polls the three owned RAG log groups" tooltip="docs/logging/RAG.md; scripts/lib/ai_elastic.py&#10;Polls the three owned RAG log groups" source="docs/logging/RAG.md; scripts/lib/ai_elastic.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="565" y="1025" width="465" height="110" />
+          </mxCell>
+        </object>
+        <object id="elastic" label="Elastic Security&#10;RAG events and configured detections" tooltip="docs/logging/RAG.md&#10;RAG events and configured detections" source="docs/logging/RAG.md">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1085" y="1025" width="465" height="110" />
+          </mxCell>
+        </object>
+        <mxCell id="log1" value="collection" parent="1" edge="1" source="cw" target="collector" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="log2" value="delivery" parent="1" edge="1" source="collector" target="elastic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="rnote" value="Preparation: KB sync reads documents, embeds them and writes the vector index. Current small fixtures use no chunk splitting. The chat request uses Retrieve, not RetrieveAndGenerate. Logs do not prove an attack succeeded." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=16;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1160" width="1500" height="60" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="agent" name="3 · Customer agent">
+    <mxGraphModel dx="1600" dy="1550" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1550" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Customer support agent" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=32;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="25" width="1500" height="48" />
+        </mxCell>
+        <mxCell id="subtitle" value="Follow the numbered steps. The model proposes a lookup; application and service controls decide whether it can execute." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="82" width="1500" height="50" />
+        </mxCell>
+        <mxCell id="footer" value="AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1502" width="1500" height="28" />
+        </mxCell>
+        <object id="employee" label="Employee / client&#10;1. Sign in, then send message&#10;and access token" tooltip="agent_lab/terraform/identity.tf; agent_lab/terraform/api.tf&#10;1. Sign in, then send message&#10;and access token" source="agent_lab/terraform/identity.tf; agent_lab/terraform/api.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="255" width="260" height="135" />
+          </mxCell>
+        </object>
+        <object id="cognito" label="Amazon Cognito&#10;Employee token + chat scope" tooltip="agent_lab/terraform/identity.tf&#10;Employee token + chat scope" source="agent_lab/terraform/identity.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="140" width="260" height="100" />
+          </mxCell>
+        </object>
+        <mxCell id="al" value="sign-in / token" parent="1" edge="1" source="employee" target="cognito" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=1;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <object id="api" label="HTTP API Gateway&#10;2. Verify JWT and chat scope&#10;Route /chat or /logout" tooltip="agent_lab/terraform/api.tf&#10;2. Verify JWT and chat scope&#10;Route /chat or /logout" source="agent_lab/terraform/api.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="390" y="255" width="285" height="135" />
+          </mxCell>
+        </object>
+        <object id="backend" label="Backend Lambda&#10;3. Verify identity / enabled status&#10;Bind session to employee&#10;Bridge model and tool calls" tooltip="agent_lab/src/agent_app/backend.py; agent_lab/src/agent_app/identity.py&#10;3. Verify identity / enabled status&#10;Bind session to employee&#10;Bridge model and tool calls" source="agent_lab/src/agent_app/backend.py; agent_lab/src/agent_app/identity.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="765" y="255" width="330" height="160" />
+          </mxCell>
+        </object>
+        <object id="harness" label="AgentCore Harness&#10;4. Calls configured Bedrock model&#10;Returns get_customer request&#10;or a completed model turn" tooltip="agent_lab/terraform/agent.tf; agent_lab/src/agent_app/backend.py:parse_turn&#10;4. Calls configured Bedrock model&#10;Returns get_customer request&#10;or a completed model turn" source="agent_lab/terraform/agent.tf; agent_lab/src/agent_app/backend.py:parse_turn">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1205" y="255" width="345" height="160" />
+          </mxCell>
+        </object>
+        <mxCell id="aapi" value="chat" parent="1" edge="1" source="employee" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ab" value="claims" parent="1" edge="1" source="api" target="backend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="160" y="1003" as="sourcePoint" />
-            <mxPoint x="216" y="1003" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720.0" y="322.5" />
+              <mxPoint x="720.0" y="335.0" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="legt1" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=15;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Request / interaction">
-          <mxGeometry as="geometry" x="231" y="994" width="299.25" height="19.2" />
+        <mxCell id="bh" value="turns" parent="1" edge="1" source="backend" target="harness" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
         </mxCell>
-        <mxCell id="leg2" edge="1" parent="1" style="edgeStyle=none;rounded=0;strokeWidth=1.65;endArrow=block;endFill=1;strokeColor=#257876;dashed=1;dashPattern=5 4;">
+        <object id="gateway" label="AgentCore Gateway&#10;5. Authenticate JWT / scope&#10;Run interceptor and policy engine&#10;Invoke permitted target only" tooltip="agent_lab/terraform/agent.tf&#10;5. Authenticate JWT / scope&#10;Run interceptor and policy engine&#10;Invoke permitted target only" source="agent_lab/terraform/agent.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="765" y="560" width="330" height="160" />
+          </mxCell>
+        </object>
+        <object id="interceptor" label="Interceptor Lambda&#10;6. Verify bearer token&#10;Replace supplied userContext&#10;with verified issuer + subject" tooltip="agent_lab/src/agent_app/interceptor.py&#10;6. Verify bearer token&#10;Replace supplied userContext&#10;with verified issuer + subject" source="agent_lab/src/agent_app/interceptor.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1205" y="500" width="345" height="160" />
+          </mxCell>
+        </object>
+        <object id="cedar" label="Policy engine / Cedar&#10;7. Permit tool action only if scope&#10;and forwarded identity match JWT.&#10;Explicit forbid can block the call." tooltip="agent_lab/terraform/agent.tf; scripts/agent_policy_audit.py:compare&#10;7. Permit tool action only if scope&#10;and forwarded identity match JWT.&#10;Explicit forbid can block the call." source="agent_lab/terraform/agent.tf; scripts/agent_policy_audit.py:compare">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1205" y="710" width="345" height="160" />
+          </mxCell>
+        </object>
+        <mxCell id="bg" value="tool call / result" parent="1" edge="1" source="backend" target="gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="gi" value="verify" parent="1" edge="1" source="gateway" target="interceptor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
           <mxGeometry as="geometry" relative="1">
-            <mxPoint x="460" y="1003" as="sourcePoint" />
-            <mxPoint x="516" y="1003" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1150" y="640" />
+              <mxPoint x="1150" y="580" />
+            </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="legt2" parent="1" vertex="1" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontSize=15;fontFamily=Arial;fontStyle=0;fontColor=#263747;" value="Telemetry delivery">
-          <mxGeometry as="geometry" x="531" y="994" width="256.5" height="19.2" />
+        <mxCell id="gc" value="authorization" parent="1" edge="1" source="gateway" target="cedar" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="1140" y="640" />
+              <mxPoint x="1140" y="790" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <object id="customer" label="Customer lookup Lambda&#10;8. Validate trusted context&#10;Check enabled employee + assignment&#10;Return only approved customer fields" tooltip="agent_lab/src/agent_app/customer.py&#10;8. Validate trusted context&#10;Check enabled employee + assignment&#10;Return only approved customer fields" source="agent_lab/src/agent_app/customer.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="765" y="955" width="330" height="160" />
+          </mxCell>
+        </object>
+        <mxCell id="gt" value="only if policy permits" parent="1" edge="1" source="gateway" target="customer" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <object id="db" label="Amazon DynamoDB&#10;Customers + entitlements + sessions&#10;Backend: employee and session checks&#10;Tool: employee / customer assignment" tooltip="agent_lab/terraform/identity.tf; agent_lab/src/agent_app/ddb_read.py; agent_lab/src/agent_app/ddb_sessions.py&#10;Customers + entitlements + sessions&#10;Backend: employee and session checks&#10;Tool: employee / customer assignment" source="agent_lab/terraform/identity.tf; agent_lab/src/agent_app/ddb_read.py; agent_lab/src/agent_app/ddb_sessions.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1205" y="955" width="345" height="160" />
+          </mxCell>
+        </object>
+        <mxCell id="tdb" value="current records" parent="1" edge="1" source="customer" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <object id="flow" label="Result returns through backend&#10;9. Tool receipt → backend → Harness&#10;10. Model answer → backend → client&#10;Denied / missing receipt → denial answer" tooltip="agent_lab/src/agent_app/backend.py:handler&#10;9. Tool receipt → backend → Harness&#10;10. Model answer → backend → client&#10;Denied / missing receipt → denial answer" source="agent_lab/src/agent_app/backend.py:handler">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="560" width="625" height="160" />
+          </mxCell>
+        </object>
+        <object id="limits" label="Separate authorization boundaries&#10;Cedar controls permission to invoke the tool.&#10;Customer Lambda controls access to the record.&#10;IAM limits which services can invoke / read." tooltip="agent_lab/terraform/agent.tf; agent_lab/terraform/runtime_permissions.tf; agent_lab/src/agent_app/customer.py&#10;Cedar controls permission to invoke the tool.&#10;Customer Lambda controls access to the record.&#10;IAM limits which services can invoke / read." source="agent_lab/terraform/agent.tf; agent_lab/terraform/runtime_permissions.tf; agent_lab/src/agent_app/customer.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="780" width="625" height="160" />
+          </mxCell>
+        </object>
+        <object id="ddbread" label="Backend also uses DynamoDB&#10;Employee enabled status and session ownership&#10;are checked outside the model.&#10;No Knowledge Base dependency." tooltip="agent_lab/src/agent_app/backend.py; agent_lab/src/agent_app/ddb_sessions.py&#10;Employee enabled status and session ownership&#10;are checked outside the model.&#10;No Knowledge Base dependency." source="agent_lab/src/agent_app/backend.py; agent_lab/src/agent_app/ddb_sessions.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="985" width="625" height="130" />
+          </mxCell>
+        </object>
+        <mxCell id="aloghead" value="TWO TELEMETRY PATHS" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=20;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1160" width="1450" height="30" />
+        </mxCell>
+        <object id="applogs" label="Application / service logs&#10;Backend, interceptor, customer, HTTP API,&#10;Gateway application logs, native Harness&#10;CloudWatch → agent shipper → Elastic" tooltip="agent_lab/terraform/logging.tf; agent_lab/src/agent_app/shipper.py&#10;Backend, interceptor, customer, HTTP API,&#10;Gateway application logs, native Harness&#10;CloudWatch → agent shipper → Elastic" source="agent_lab/terraform/logging.tf; agent_lab/src/agent_app/shipper.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="1215" width="700" height="150" />
+          </mxCell>
+        </object>
+        <object id="auditlogs" label="Native policy / invocation audit&#10;Gateway traces → X-Ray destination → aws/spans&#10;Customer Invoke: CloudTrail → S3 + CloudWatch&#10;Scoped subscriptions → audit forwarder → Elastic" tooltip="agent_lab/policy_audit/main.tf; scripts/agent_policy_audit.py:bootstrap; agent_lab/policy_audit/forwarding/main.tf&#10;Gateway traces → X-Ray destination → aws/spans&#10;Customer Invoke: CloudTrail → S3 + CloudWatch&#10;Scoped subscriptions → audit forwarder → Elastic" source="agent_lab/policy_audit/main.tf; scripts/agent_policy_audit.py:bootstrap; agent_lab/policy_audit/forwarding/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="800" y="1215" width="750" height="150" />
+          </mxCell>
+        </object>
+        <mxCell id="anote" value="Policy tracing uses shared Transaction Search prerequisites retained on cleanup. The invocation trail is scoped to the customer function. Paths shown are implemented configuration; latest redeployment delivery remains unverified (CloudTrail CannotAssumeRole)." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=16;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1400" width="1500" height="65" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="mcp" name="4 · MCP">
+    <mxGraphModel dx="1600" dy="1320" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1320" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Separate MCP workload" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=32;fontColor=#243747;fontStyle=1;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="25" width="1500" height="48" />
+        </mxCell>
+        <mxCell id="subtitle" value="The operator-side client connects to both the MCP server and a dedicated Harness. The server does not call the model." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="82" width="1500" height="50" />
+        </mxCell>
+        <mxCell id="footer" value="AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim" parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1272" width="1500" height="28" />
+        </mxCell>
+        <object id="client" label="Operator-side MCP client&#10;1. Discover and validate tools&#10;3. Execute approved model request&#10;5. Check result and return to model" tooltip="mcp_lab/client.py:Bridge; mcp_lab/harness.py:run; mcp_lab/runtime_client.py&#10;1. Discover and validate tools&#10;3. Execute approved model request&#10;5. Check result and return to model" source="mcp_lab/client.py:Bridge; mcp_lab/harness.py:run; mcp_lab/runtime_client.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#EEF4FC;strokeColor=#7393BE;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="300" width="380" height="170" />
+          </mxCell>
+        </object>
+        <object id="server" label="AgentCore Runtime&#10;MCP server /mcp&#10;Tool catalog + lookup_product&#10;Synthetic product DEMO-001 only" tooltip="mcp_lab/server.py; mcp_lab/terraform/main.tf&#10;MCP server /mcp&#10;Tool catalog + lookup_product&#10;Synthetic product DEMO-001 only" source="mcp_lab/server.py; mcp_lab/terraform/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="650" y="300" width="380" height="170" />
+          </mxCell>
+        </object>
+        <object id="harness" label="Dedicated AgentCore Harness&#10;2. Receive accepted tool definitions&#10;4. Receive accepted tool result&#10;Return tool request or final answer" tooltip="mcp_lab/harness.py; mcp_lab/terraform/main.tf&#10;2. Receive accepted tool definitions&#10;4. Receive accepted tool result&#10;Return tool request or final answer" source="mcp_lab/harness.py; mcp_lab/terraform/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="650" y="620" width="380" height="170" />
+          </mxCell>
+        </object>
+        <object id="model" label="Bedrock model&#10;Harness invokes configured model&#10;Does not authenticate the caller&#10;or grant tool permissions" tooltip="mcp_lab/terraform/main.tf&#10;Harness invokes configured model&#10;Does not authenticate the caller&#10;or grant tool permissions" source="mcp_lab/terraform/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F3;strokeColor=#69A89C;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1170" y="620" width="380" height="170" />
+          </mxCell>
+        </object>
+        <mxCell id="discover" value="discover / call / result" parent="1" edge="1" source="client" target="server" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="mh" value="definitions, results / model turns" parent="1" edge="1" source="client" target="harness" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1">
+            <Array as="points">
+              <mxPoint x="240" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="hm" value="inference" parent="1" edge="1" source="harness" target="model" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#243747;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#243747;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;startArrow=block;startFill=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <object id="auth" label="AWS access boundary&#10;Operator IAM / SigV4 for remote Runtime&#10;and Harness calls. Separate service roles.&#10;No employee Cognito or customer Gateway." tooltip="mcp_lab/runtime_client.py; mcp_lab/harness.py; mcp_lab/permissions.py; mcp_lab/terraform/main.tf&#10;Operator IAM / SigV4 for remote Runtime&#10;and Harness calls. Separate service roles.&#10;No employee Cognito or customer Gateway." source="mcp_lab/runtime_client.py; mcp_lab/harness.py; mcp_lab/permissions.py; mcp_lab/terraform/main.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="145" width="1500" height="115" />
+          </mxCell>
+        </object>
+        <object id="fixtures" label="Controlled server variants&#10;Baseline, poisoned description / result,&#10;and changed tool schema / catalog.&#10;Server fixture changes independently." tooltip="mcp_lab/fixtures.py; mcp_lab/server.py; mcp_lab/acceptance.py&#10;Baseline, poisoned description / result,&#10;and changed tool schema / catalog.&#10;Server fixture changes independently." source="mcp_lab/fixtures.py; mcp_lab/server.py; mcp_lab/acceptance.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1170" y="300" width="380" height="170" />
+          </mxCell>
+        </object>
+        <object id="checks" label="Client enforcement&#10;Allowlisted tool / SKU and schema;&#10;re-discover before call, reject changes;&#10;check catalog / receipt / result agreement." tooltip="mcp_lab/client.py:accepted_catalog,Bridge&#10;Allowlisted tool / SKU and schema;&#10;re-discover before call, reject changes;&#10;check catalog / receipt / result agreement." source="mcp_lab/client.py:accepted_catalog,Bridge">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5EFFB;strokeColor=#AA92C7;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="820" width="480" height="150" />
+          </mxCell>
+        </object>
+        <object id="evidence" label="Experiment evidence&#10;Local request / result artifacts + hashes;&#10;server receipt and completed model call;&#10;check test phrase in the final answer." tooltip="mcp_lab/evidence.py; mcp_lab/harness.py; mcp_lab/answer_checks.py&#10;Local request / result artifacts + hashes;&#10;server receipt and completed model call;&#10;check test phrase in the final answer." source="mcp_lab/evidence.py; mcp_lab/harness.py; mcp_lab/answer_checks.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#F5F7FA;strokeColor=#C8D1DA;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="560" y="820" width="480" height="150" />
+          </mxCell>
+        </object>
+        <object id="package" label="Deployment support&#10;S3 holds versioned server code package.&#10;Runtime fetches it for deployment.&#10;It is not a customer/product database." tooltip="mcp_lab/terraform/main.tf; mcp_lab/package.py&#10;S3 holds versioned server code package.&#10;Runtime fetches it for deployment.&#10;It is not a customer/product database." source="mcp_lab/terraform/main.tf; mcp_lab/package.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#FFF5E7;strokeColor=#D6AA6A;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1070" y="820" width="480" height="150" />
+          </mxCell>
+        </object>
+        <object id="mlogs" label="CloudWatch Logs&#10;Server + native Harness + published&#10;sanitized client events (full acceptance)" tooltip="mcp_lab/acceptance.py; mcp_lab/terraform/elastic.tf&#10;Server + native Harness + published&#10;sanitary client events (full acceptance)" source="mcp_lab/acceptance.py; mcp_lab/terraform/elastic.tf">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="50" y="1040" width="480" height="135" />
+          </mxCell>
+        </object>
+        <object id="shipper" label="Dedicated shipper Lambda&#10;Three source subscriptions&#10;Sanitize / forward allowlisted fields" tooltip="mcp_lab/terraform/elastic.tf; mcp_lab/shipper.py&#10;Three source subscriptions&#10;Sanitize / forward allowlisted fields" source="mcp_lab/terraform/elastic.tf; mcp_lab/shipper.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="560" y="1040" width="480" height="135" />
+          </mxCell>
+        </object>
+        <object id="elastic" label="Elastic Security&#10;MCP workload stream; correlate with&#10;private experiment evidence" tooltip="mcp_lab/telemetry.py&#10;MCP workload stream; correlate with&#10;private experiment evidence" source="mcp_lab/telemetry.py">
+          <mxCell parent="1" vertex="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;align=center;verticalAlign=middle;spacing=12;fillColor=#E9F6F7;strokeColor=#70A7AD;strokeWidth=1.5;fontFamily=Arial;fontSize=18;fontColor=#243747;">
+            <mxGeometry as="geometry" x="1070" y="1040" width="480" height="135" />
+          </mxCell>
+        </object>
+        <mxCell id="ml1" value="subscription" parent="1" edge="1" source="mlogs" target="shipper" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="ml2" value="delivery" parent="1" edge="1" source="shipper" target="elastic" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=1;strokeColor=#087F82;strokeWidth=2;fontFamily=Arial;fontSize=15;fontColor=#087F82;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;">
+          <mxGeometry as="geometry" relative="1" />
+        </mxCell>
+        <mxCell id="mnote" value="Attack text reaching the model and the model following it are separate observations. Local server hosting is also supported; this page shows AWS hosting. No writes, refunds or customer access are implemented by this synthetic MCP tool." parent="1" vertex="1" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=16;fontColor=#243747;fontStyle=0;spacing=0;">
+          <mxGeometry as="geometry" x="50" y="1205" width="1500" height="65" />
         </mxCell>
       </root>
     </mxGraphModel>

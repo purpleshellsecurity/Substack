@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1550" viewBox="0 0 1600 1550">
+<rect width="100%" height="100%" fill="white"/>
+<defs>
+<marker id="request" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#243747"/></marker>
+<marker id="log" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#087F82"/></marker>
+<marker id="prep" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#B66A18"/></marker>
+</defs>
+<polyline points="180.0,255 180.0,240" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="310,322.5 390,322.5" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="675,322.5 720.0,322.5 720.0,335.0 765,335.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="1095,335.0 1205,335.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="930.0,415 930.0,560" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="1095,640.0 1150,640 1150,580 1205,580.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="1095,640.0 1140,640 1140,790 1205,790.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="930.0,720 930.0,955" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<polyline points="1095,1035.0 1205,1035.0" fill="none" stroke="#243747" stroke-width="2" marker-end="url(#request)" marker-start="url(#request)"/>
+<text x="50" y="57" font-family="Arial, sans-serif" font-size="32" font-weight="700" fill="#243747">Customer support agent</text>
+<text x="50" y="100" font-family="Arial, sans-serif" font-size="18" font-weight="400" fill="#243747">Follow the numbered steps. The model proposes a lookup; application and service controls decide whether it can execute.</text>
+<text x="50" y="1516" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#243747">AdversaryLabAI  |  Code review: 26 Nov 2026  |  Lab revision e639b49  |  Design view; not a live-health or ATLAS coverage claim</text>
+<rect x="50" y="255" width="260" height="135" rx="10" fill="#EEF4FC" stroke="#7393BE" stroke-width="1.5"/>
+<text x="180.0" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Employee / client</text>
+<text x="180.0" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">1. Sign in, then send</text>
+<text x="180.0" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">message</text>
+<text x="180.0" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">and access token</text>
+<rect x="50" y="140" width="260" height="100" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="180.0" y="171" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Amazon Cognito</text>
+<text x="180.0" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Employee token + chat scope</text>
+<rect x="390" y="255" width="285" height="135" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="532.5" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">HTTP API Gateway</text>
+<text x="532.5" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">2. Verify JWT and chat scope</text>
+<text x="532.5" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Route /chat or /logout</text>
+<rect x="765" y="255" width="330" height="160" rx="10" fill="#EEF4FC" stroke="#7393BE" stroke-width="1.5"/>
+<text x="930.0" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Backend Lambda</text>
+<text x="930.0" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">3. Verify identity / enabled status</text>
+<text x="930.0" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Bind session to employee</text>
+<text x="930.0" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Bridge model and tool calls</text>
+<rect x="1205" y="255" width="345" height="160" rx="10" fill="#E9F6F3" stroke="#69A89C" stroke-width="1.5"/>
+<text x="1377.5" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">AgentCore Harness</text>
+<text x="1377.5" y="314" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">4. Calls configured Bedrock model</text>
+<text x="1377.5" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Returns get_customer request</text>
+<text x="1377.5" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">or a completed model turn</text>
+<rect x="765" y="560" width="330" height="160" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="930.0" y="591" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">AgentCore Gateway</text>
+<text x="930.0" y="619" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">5. Authenticate JWT / scope</text>
+<text x="930.0" y="642" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Run interceptor and policy engine</text>
+<text x="930.0" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Invoke permitted target only</text>
+<rect x="1205" y="500" width="345" height="160" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="1377.5" y="531" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Interceptor Lambda</text>
+<text x="1377.5" y="559" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">6. Verify bearer token</text>
+<text x="1377.5" y="582" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Replace supplied userContext</text>
+<text x="1377.5" y="605" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">with verified issuer + subject</text>
+<rect x="1205" y="710" width="345" height="160" rx="10" fill="#F5EFFB" stroke="#AA92C7" stroke-width="1.5"/>
+<text x="1377.5" y="741" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Policy engine / Cedar</text>
+<text x="1377.5" y="769" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">7. Permit tool action only if scope</text>
+<text x="1377.5" y="792" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">and forwarded identity match JWT.</text>
+<text x="1377.5" y="815" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Explicit forbid can block the call.</text>
+<rect x="765" y="955" width="330" height="160" rx="10" fill="#EEF4FC" stroke="#7393BE" stroke-width="1.5"/>
+<text x="930.0" y="986" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Customer lookup Lambda</text>
+<text x="930.0" y="1014" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">8. Validate trusted context</text>
+<text x="930.0" y="1037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Check enabled employee + assignment</text>
+<text x="930.0" y="1060" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Return only approved customer</text>
+<text x="930.0" y="1083" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">fields</text>
+<rect x="1205" y="955" width="345" height="160" rx="10" fill="#FFF5E7" stroke="#D6AA6A" stroke-width="1.5"/>
+<text x="1377.5" y="986" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Amazon DynamoDB</text>
+<text x="1377.5" y="1014" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Customers + entitlements + sessions</text>
+<text x="1377.5" y="1037" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Backend: employee and session checks</text>
+<text x="1377.5" y="1060" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Tool: employee / customer assignment</text>
+<rect x="50" y="560" width="625" height="160" rx="10" fill="#F5F7FA" stroke="#C8D1DA" stroke-width="1.5"/>
+<text x="362.5" y="591" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Result returns through backend</text>
+<text x="362.5" y="619" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">9. Tool receipt → backend → Harness</text>
+<text x="362.5" y="642" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">10. Model answer → backend → client</text>
+<text x="362.5" y="665" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Denied / missing receipt → denial answer</text>
+<rect x="50" y="780" width="625" height="160" rx="10" fill="#F5F7FA" stroke="#C8D1DA" stroke-width="1.5"/>
+<text x="362.5" y="811" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Separate authorization boundaries</text>
+<text x="362.5" y="839" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Cedar controls permission to invoke the tool.</text>
+<text x="362.5" y="862" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Customer Lambda controls access to the record.</text>
+<text x="362.5" y="885" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">IAM limits which services can invoke / read.</text>
+<rect x="50" y="985" width="625" height="130" rx="10" fill="#F5F7FA" stroke="#C8D1DA" stroke-width="1.5"/>
+<text x="362.5" y="1016" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Backend also uses DynamoDB</text>
+<text x="362.5" y="1044" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Employee enabled status and session ownership</text>
+<text x="362.5" y="1067" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">are checked outside the model.</text>
+<text x="362.5" y="1090" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">No Knowledge Base dependency.</text>
+<text x="50" y="1180" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">TWO TELEMETRY PATHS</text>
+<rect x="50" y="1215" width="700" height="150" rx="10" fill="#E9F6F7" stroke="#70A7AD" stroke-width="1.5"/>
+<text x="400.0" y="1246" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Application / service logs</text>
+<text x="400.0" y="1274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Backend, interceptor, customer, HTTP API,</text>
+<text x="400.0" y="1297" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Gateway application logs, native Harness</text>
+<text x="400.0" y="1320" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">CloudWatch → agent shipper → Elastic</text>
+<rect x="800" y="1215" width="750" height="150" rx="10" fill="#E9F6F7" stroke="#70A7AD" stroke-width="1.5"/>
+<text x="1175.0" y="1246" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#243747">Native policy / invocation audit</text>
+<text x="1175.0" y="1274" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Gateway traces → X-Ray destination → aws/spans</text>
+<text x="1175.0" y="1297" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Customer Invoke: CloudTrail → S3 + CloudWatch</text>
+<text x="1175.0" y="1320" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#526575">Scoped subscriptions → audit forwarder → Elastic</text>
+<text x="50" y="1416" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#243747">Policy tracing uses shared Transaction Search prerequisites retained on cleanup. The invocation trail is scoped to the customer function. Paths shown are implemented configuration;</text>
+<text x="50" y="1437" font-family="Arial, sans-serif" font-size="16" font-weight="400" fill="#243747">latest redeployment delivery remains unverified (CloudTrail CannotAssumeRole).</text>
+<text x="188.0" y="237.5" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">sign-in / token</text>
+<text x="350.0" y="312.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">chat</text>
+<text x="697.5" y="312.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">claims</text>
+<text x="1150.0" y="325.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">turns</text>
+<text x="938.0" y="477.5" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">tool call / result</text>
+<text x="1158.0" y="600.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">verify</text>
+<text x="1148.0" y="705.0" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">authorization</text>
+<text x="938.0" y="827.5" text-anchor="start" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">only if policy permits</text>
+<text x="1150.0" y="1025.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" fill="#243747" stroke="white" stroke-width="6" paint-order="stroke">current records</text>
+</svg>
