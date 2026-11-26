@@ -40,11 +40,13 @@ I kept this separate from the customer agent because I wanted to change what the
 
 The shared environment started with a VPC, an Ubuntu EC2 host, and Systems Manager for host access. I chose Elastic Security Serverless because the part I wanted to spend time on was the evidence. Running the SIEM myself would have added work without helping me answer any of those questions.
 
-I still had to decide which events to collect and how they would get there. CloudTrail gives me the AWS API activity, VPC Flow Logs give me the network view, and Elastic Defend gives me the host activity. The EC2 collector also picks up the document chat’s CloudWatch logs. The customer agent and MCP workloads use dedicated Lambda shippers for their application logs. [Core logging diagram](assets/AdversaryLabAI-core.png)
+I still had to decide which events to collect and how they would get there. CloudTrail gives me the AWS API activity, VPC Flow Logs give me the network view, and Elastic Defend gives me the host activity. The EC2 collector also picks up the document chat’s CloudWatch logs. The customer agent and MCP workloads use dedicated Lambda shippers for their application logs.
+
+![Core logging architecture showing how AWS, host, and application events reach Elastic Security](assets/AdversaryLabAI-core.png)
 
 The piece I’d carry into another project is the application logging. I can collect AWS telemetry after deciding which services to deploy. To answer why the document chat excluded a passage or why a customer lookup returned a denial, I have to capture the decision where the application makes it. An investigator coming along later gets whatever I chose to record there.
 
-One limit matters for the customer lookup example. On the latest agent deployment covered by the architecture notes, the native Lambda invocation audit events failed delivery from CloudTrail to CloudWatch. That leaves a gap in independently confirming an invocation through that path. I’ve included the collection design and the observed limits in the [architecture walkthrough](assets/ARCHITECTURE.md).
+On the agent deployment I reviewed, CloudTrail failed to deliver the customer Lambda’s invocation events to CloudWatch. That left me without an independent check on whether the function ran. A missing event on that path tells me nothing about whether the employee’s lookup was allowed or denied.
 
 I started this lab because I wanted to know what an investigator could reconstruct after an AI application handled a request. In the next piece, I’ll start with the document chat and follow one question through Elastic, from the five passages the search returned to the four the application selected.
 
