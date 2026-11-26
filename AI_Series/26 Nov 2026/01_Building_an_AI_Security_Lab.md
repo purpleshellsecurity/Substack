@@ -50,15 +50,17 @@ The server offers one synthetic product lookup tool. The client discovers its de
 
 Keeping the server separate lets me change a tool description, result, or catalog without changing the customer support agent. I can compare what the server published, what the client accepted, what was submitted to the model, and what appeared in the answer. Local hosting supports protocol experiments; deploying the server to AgentCore Runtime also lets me investigate the AWS authentication and logging paths. This workload uses operator IAM credentials rather than employee Cognito tokens.
 
-## Initial experiments
+## Initial ATLAS experiments
 
-I started with a few focused experiments:
+I started with a few experiments based on MITRE ATLAS behaviors:
 
-- **RAG:** I compared a clean vendor memo with a poisoned version using the same question. The poisoned instruction was included in the model context, but its requested test phrase did not appear in the answer. Controls were disabled for both runs, so this was an instruction-delivery and answer comparison, not a test of authenticated access or the application’s document-quarantine check.
-- **Customer agent:** Allowed and denied customer lookups exercised the employee access checks. In a separate comparison, employee-a requested an unassigned customer, then repeated the request while claiming to be employee-b. Both lookups used employee-a's verified identity and were denied by the customer function. The written claim did not change access on those requests.
-- **MCP:** Baseline, description-poisoning, result-poisoning, and catalog-change cases exercised the client/server boundary. In the recorded poisoning runs, the injected content was delivered to the model, but the requested test phrases were absent from the answers. Separate checks exercised rejection of unapproved or changed tool definitions.
+- **RAG:** Instructions hidden in a retrieved document attempted to change the model’s answer.
+- **Customer agent:** A message claiming another employee’s identity attempted to obtain an unassigned customer record.
+- **MCP:** Instructions placed in tool descriptions and returned content attempted to influence the model’s answer.
 
-These results describe the recorded inputs, configurations, and responses. They are not a technique-coverage count or proof of protection against every variation of an attack.
+In the recorded runs, the document and MCP instructions reached the model, but their requested phrases did not appear in the answers. The customer application continued using the signed-in employee’s identity and denied the unassigned lookups.
+
+These were bounded attempts to reproduce specific ATLAS behaviors, not confirmation of complete technique coverage or general protection. The RAG comparison used the lab’s controls-off setting; it did not test whether access checks or document screening would block the instruction.
 
 ## Following an experiment through the lab
 
