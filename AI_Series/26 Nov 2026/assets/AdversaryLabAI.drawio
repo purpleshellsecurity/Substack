@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="lab-overview" name="Research lab">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="746" pageHeight="884" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="page-background" parent="1" style="rounded=0;absoluteArcSize=1;arcSize=22;fillColor=#FFFFFF;strokeColor=none;strokeWidth=1.5;html=0;whiteSpace=wrap;locked=1;connectable=0;pointerEvents=0;" vertex="1">
+          <mxGeometry x="0" y="0" width="746" height="884" as="geometry" />
+        </mxCell>
+        <mxCell id="title" parent="1" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=46;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="AdversaryLabAI" vertex="1" connectable="0">
+          <mxGeometry x="32" y="27" width="684" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=24;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="How AWS and application telemetry reaches Elastic" vertex="1" connectable="0">
+          <mxGeometry x="33" y="88" width="682" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="divider" parent="1" style="rounded=0;absoluteArcSize=1;arcSize=22;fillColor=#D8D3E3;strokeColor=none;strokeWidth=1.5;html=0;whiteSpace=wrap;locked=1;connectable=0;pointerEvents=0;" vertex="1">
+          <mxGeometry x="32" y="135" width="680" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="source-heading" parent="1" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="AWS sources" vertex="1" connectable="0">
+          <mxGeometry x="32" y="151" width="325" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="route-heading" parent="1" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=21;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="Collection path" vertex="1" connectable="0">
+          <mxGeometry x="410" y="151" width="254" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="base" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#F5F2FC;strokeColor=#CCBFE7;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="32" y="194" width="332" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="base-name" parent="base" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=25;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="Core AWS environment" vertex="1" connectable="0">
+          <mxGeometry x="17" y="14" width="307" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="base-line1" parent="base" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Ubuntu on EC2 · Elastic Defend" vertex="1" connectable="0">
+          <mxGeometry x="18" y="56" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="base-line2" parent="base" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="CloudTrail · VPC Flow Logs" vertex="1" connectable="0">
+          <mxGeometry x="18" y="80" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="rag" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#F5F2FC;strokeColor=#CCBFE7;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="32" y="337" width="332" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-name" parent="rag" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=25;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="Document chat" vertex="1" connectable="0">
+          <mxGeometry x="17" y="14" width="307" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-line1" parent="rag" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Bedrock Knowledge Base" vertex="1" connectable="0">
+          <mxGeometry x="18" y="56" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-line2" parent="rag" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="and the chat application" vertex="1" connectable="0">
+          <mxGeometry x="18" y="80" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="agent" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#F5F2FC;strokeColor=#CCBFE7;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="32" y="480" width="332" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-name" parent="agent" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=25;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="Customer support agent" vertex="1" connectable="0">
+          <mxGeometry x="17" y="14" width="307" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-line1" parent="agent" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="AgentCore · Cedar policy" vertex="1" connectable="0">
+          <mxGeometry x="18" y="56" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-line2" parent="agent" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Read-only customer lookup" vertex="1" connectable="0">
+          <mxGeometry x="18" y="80" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#F5F2FC;strokeColor=#CCBFE7;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="32" y="623" width="332" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-name" parent="mcp" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=25;fontColor=#201B38;fontStyle=1;pointerEvents=0;connectable=0;" value="MCP client and server" vertex="1" connectable="0">
+          <mxGeometry x="17" y="14" width="307" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-line1" parent="mcp" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Tool discovery and descriptions" vertex="1" connectable="0">
+          <mxGeometry x="18" y="56" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-line2" parent="mcp" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Read-only product lookup" vertex="1" connectable="0">
+          <mxGeometry x="18" y="80" width="302" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="collector" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#EFF8F5;strokeColor=#A7CFC4;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="410" y="221" width="255" height="199" as="geometry" />
+        </mxCell>
+        <mxCell id="collector-name" parent="collector" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#11615E;fontStyle=1;pointerEvents=0;connectable=0;" value="Elastic Agent on EC2" vertex="1" connectable="0">
+          <mxGeometry x="16" y="22" width="230" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="collector-line1" parent="collector" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="Host events directly" vertex="1" connectable="0">
+          <mxGeometry x="16" y="75" width="231" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="collector-line2" parent="collector" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="S3 + SQS for cloud logs" vertex="1" connectable="0">
+          <mxGeometry x="16" y="105" width="231" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="collector-line3" parent="collector" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="CloudWatch for chat logs" vertex="1" connectable="0">
+          <mxGeometry x="16" y="135" width="231" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-shipper" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#EFF8F5;strokeColor=#A7CFC4;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="410" y="480" width="255" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-shipper-name" parent="agent-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#11615E;fontStyle=1;pointerEvents=0;connectable=0;" value="Agent log shipper" vertex="1" connectable="0">
+          <mxGeometry x="16" y="15" width="232" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-shipper-line1" parent="agent-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="CloudWatch Logs" vertex="1" connectable="0">
+          <mxGeometry x="16" y="55" width="232" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-shipper-line2" parent="agent-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="to a dedicated Lambda" vertex="1" connectable="0">
+          <mxGeometry x="16" y="80" width="232" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-shipper" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#EFF8F5;strokeColor=#A7CFC4;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="410" y="623" width="255" height="116" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-shipper-name" parent="mcp-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=22;fontColor=#11615E;fontStyle=1;pointerEvents=0;connectable=0;" value="MCP log shipper" vertex="1" connectable="0">
+          <mxGeometry x="16" y="15" width="232" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-shipper-line1" parent="mcp-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="CloudWatch Logs" vertex="1" connectable="0">
+          <mxGeometry x="16" y="55" width="232" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-shipper-line2" parent="mcp-shipper" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=19;fontColor=#514B66;fontStyle=0;pointerEvents=0;connectable=0;" value="to a dedicated Lambda" vertex="1" connectable="0">
+          <mxGeometry x="16" y="80" width="232" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="elastic" parent="1" style="rounded=1;absoluteArcSize=1;arcSize=22;fillColor=#30264B;strokeColor=none;strokeWidth=1.5;html=0;whiteSpace=wrap;" vertex="1">
+          <mxGeometry x="32" y="779" width="633" height="81" as="geometry" />
+        </mxCell>
+        <mxCell id="elastic-name" parent="elastic" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=27;fontColor=#FFFFFF;fontStyle=1;pointerEvents=0;connectable=0;" value="Elastic Security" vertex="1" connectable="0">
+          <mxGeometry x="18" y="10" width="597" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="elastic-body" parent="elastic" style="text;html=0;whiteSpace=nowrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacing=0;fontFamily=Arial;fontSize=20;fontColor=#E4DDF4;fontStyle=0;pointerEvents=0;connectable=0;" value="Host, cloud, and application events" vertex="1" connectable="0">
+          <mxGeometry x="19" y="47" width="590" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="join-agent" parent="1" style="ellipse;fillColor=#72609D;strokeColor=none;perimeter=none;" vertex="1">
+          <mxGeometry x="701" y="535" width="6" height="6" as="geometry" />
+        </mxCell>
+        <mxCell id="join-mcp" parent="1" style="ellipse;fillColor=#72609D;strokeColor=none;perimeter=none;" vertex="1">
+          <mxGeometry x="701" y="678" width="6" height="6" as="geometry" />
+        </mxCell>
+        <mxCell id="base-to-collector" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.15577889447236182;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="base" target="collector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rag-to-collector" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.8743718592964824;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="rag" target="collector">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-to-shipper" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="agent" target="agent-shipper">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-to-shipper" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=block;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="mcp" target="mcp-shipper">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="collector-to-bus" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=none;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="collector" target="join-agent">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="704" y="320.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="agent-to-bus" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=none;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="agent-shipper" target="join-agent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bus-continuation" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=none;endFill=1;endSize=7;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="join-agent" target="join-mcp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mcp-to-bus" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=none;endFill=1;endSize=7;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="mcp-shipper" target="join-mcp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bus-to-elastic" parent="1" style="edgeStyle=none;rounded=0;strokeColor=#72609D;strokeWidth=2;endArrow=block;endFill=1;endSize=7;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" source="join-mcp" target="elastic">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="704" y="819.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
