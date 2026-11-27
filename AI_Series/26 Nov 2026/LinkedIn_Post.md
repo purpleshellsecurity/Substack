@@ -1,12 +1,10 @@
 You Gave Your AI Agent Access. Now Prove What It Did.
 
-The search returned five documents. The application selected text from four. The vendor onboarding memo matched an injection check and was excluded.
+I started building AdversaryLabAI because I wanted to know what I could reconstruct after an AI application handled a request. If an agent used a document to answer a question or looked up a customer, what would I need in Elastic to explain what happened?
 
-A successful model call alone wouldn’t tell me which text was submitted.
+In one document-chat request, the search returned five documents. The application selected text from four and marked a vendor onboarding memo for exclusion after it matched an injection check. The model call succeeded, but I’d have missed that exclusion if I’d logged only filenames and the model status.
 
-I’m building AdversaryLabAI in AWS and Elastic to map MITRE ATLAS techniques to the infrastructure needed to test them and the evidence I can collect.
-
-I wrote up the three workloads I started with, why I chose them, and what their logs can actually tell me.
+I’m using the lab to work through MITRE ATLAS techniques and map the infrastructure and evidence each test needs. This first article walks through the three AWS workloads I started with, why I built them this way, and what I can investigate through their logs.
 
 Full article:
 https://github.com/purpleshellsecurity/Substack/blob/main/AI_Series/26%20Nov%202026/01_Building_an_AI_Security_Lab-purpleshell.md
