@@ -1,17 +1,14 @@
 You Gave Your AI Agent Access. Now Prove What It Did.
 
-The search returned content from five documents. The application marked four for inclusion in the model request. Content from the vendor onboarding memo matched a configured injection check and was marked for exclusion.
+The search returned five documents. The application selected text from four. The vendor onboarding memo matched an injection check and was excluded.
 
-In Elastic, a `retrieval` event records the document in the search results. For the memo, `action = quarantined_injection` and `included_in_context = false` record the application’s decision to exclude its text from this request’s model context. The application also recorded a successful model call under the same request ID.
+A successful model call alone wouldn’t tell me which text was submitted.
 
-Those fields tell me what the application recorded. I’d still compare them with the assembled request before treating them as proof of what the model received.
+I’m building AdversaryLabAI in AWS and Elastic to map MITRE ATLAS techniques to the infrastructure needed to test them and the evidence I can collect.
 
-I’m building AdversaryLabAI to work through MITRE ATLAS technique by technique and map what each would require in a lab: which infrastructure has to exist, what I need to control, and where I can collect evidence.
+I wrote up the three workloads I started with, why I chose them, and what their logs can actually tell me.
 
-I started with document chat, a customer support agent, and an MCP client and server, using synthetic data in AWS. Elastic gives me somewhere to examine the application and infrastructure logs. These workloads are a starting point; other techniques may need different infrastructure.
-
-I wrote up how I designed the lab and why I chose these workloads. In the series, I’ll share the tests, the evidence in Elastic, and the questions it still leaves unanswered.
-
+Full article:
 https://github.com/purpleshellsecurity/Substack/blob/main/AI_Series/26%20Nov%202026/01_Building_an_AI_Security_Lab-purpleshell.md
 
 ---
