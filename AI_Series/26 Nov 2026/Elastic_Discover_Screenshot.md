@@ -33,7 +33,7 @@ FROM logs-adversarylab.ai-*
 | LIMIT 100
 ```
 
-Look for the search (`retrieval_query`), a row per retrieved passage (`retrieval`), and the application’s record of the model call (`model_result`). On retrieval rows, `in_context` records the application's decision about including that passage. On the model-result row, read `model_status`. Blank cells are expected when a field belongs to another event type. If you see only part of the sequence, check the time range and both IDs before drawing conclusions.
+Look for the search (`retrieval_query`), a row per retrieved document (`retrieval`), and the application’s record of the model call (`model_result`). On retrieval rows, `in_context` records the application's decision about including that document's text. On the model-result row, read `model_status`. Blank cells are expected when a field belongs to another event type. If you see only part of the sequence, check the time range and both IDs before drawing conclusions.
 
 **Screenshot.** Crop to the result table with the timestamps and column headers visible. Use a request whose document names are suitable to publish. Leave the query editor, deployment IDs, request IDs, and raw prompts out of the crop. Place the screenshot after the document chat paragraph in the article.
 
@@ -44,3 +44,4 @@ Look for the search (`retrieval_query`), a row per retrieved passage (`retrieval
 [Editable draw.io diagram](assets/AdversaryLabAI.drawio) · [Newsletter PNG](assets/AdversaryLabAI.png). Download the editable file and open it in the [draw.io editor](https://app.diagrams.net/). The article already embeds the PNG.
 
 [Original series plan](../24_Nov_2026/Series_Plan.md)
+

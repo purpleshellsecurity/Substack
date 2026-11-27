@@ -10,11 +10,13 @@ My goal with AdversaryLabAI is to work through MITRE ATLAS technique by techniqu
 
 ## Can I tell which documents made it into the model request?
 
-I started with a chat app that answers questions from documents in S3. A Bedrock Knowledge Base searches those documents and returns relevant passages. I gave the chat Lambda responsibility for choosing which passages to send to the model. That gave me a place to record the decision for each passage while the request was being assembled.
+I started with a chat app that answers questions from documents in S3. A Bedrock Knowledge Base searches them and returns relevant document text. I gave the chat Lambda responsibility for choosing which document text to send to the model. That gave me a place to record the decision for each retrieved document while the request was being assembled.
 
 ![Document chat architecture showing the separate retrieval and model calls made by the chat Lambda.](assets/AdversaryLabAI-rag.png)
 
-Here’s what that bought me. In one request, the search returned five passages. Four were marked for inclusion. The fifth came from `Enso_Vendor_Onboarding_Memo.md`. It showed up in the search results, matched a configured injection check, and was logged with `action = quarantined_injection` and `included_in_context = false`. The application also recorded a successful model call under the same request ID.
+Here’s what that bought me. In one request, the search returned content from five documents. The application marked four for inclusion in the model request. Content from the fifth document, `Enso_Vendor_Onboarding_Memo.md`, matched a configured injection check and was marked for exclusion. Its retrieval event recorded `action = quarantined_injection` and `included_in_context = false`. The application also recorded a successful model call under the same request ID.
+
+The check runs in the chat Lambda before it assembles the model request. With controls enabled, it looks for configured patterns in the retrieved text, such as “ignore previous instructions.” A match keeps that text out of the model context for the request; it does not move the source document out of S3. That is why a `retrieval` event can carry a `quarantined_injection` action. The Bedrock Guardrail shown in the diagram is attached separately to the model call. This pattern check only covers the expressions I configured.
 
 If I’d logged only the filenames and the model status, I could have pulled up that request a week later and reasonably suspected the memo had been passed to the model. One field let me see what the application actually selected. It’s the field I’d want at hand if somebody asked, “Did our document chat use that memo?”
 
@@ -51,3 +53,4 @@ That’s where the newsletter comes in. For the techniques I can test, I’ll us
 See you in the next one 👋
 
 Charles
+

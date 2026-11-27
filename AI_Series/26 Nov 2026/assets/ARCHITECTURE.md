@@ -16,7 +16,7 @@ The operator-side clients and Elastic are outside the AWS sandbox. Other named s
 
 The overview separates Gateway from the customer lookup Lambda so tool permission and record permission are not collapsed into one box. On the agent page, DynamoDB is shown by its two uses: backend employee/session checks and tool employee/assignment/customer reads. These are views of the existing tables, not two new databases; the entitlements table is shared between the two checks. Harness calls the Bedrock model, while the backend calls Gateway.
 
-The RAG page separates verified clearance, passage selection and the configured model Guardrail. The MCP page distinguishes restricted and experimental catalogs and makes clear that validating a result’s format does not establish that its text contains no malicious instructions.
+The RAG page separates verified clearance, selection of document text and the configured model Guardrail. The MCP page distinguishes restricted and experimental catalogs and makes clear that validating a result’s format does not establish that its text contains no malicious instructions.
 
 The article embeds the RAG, customer-agent and MCP PNGs in their respective sections. The combined overview is retained as a separate reference. Workload diagrams show application request paths, attached controls and data dependencies. Their logging bands have been removed: the separate Core logging page shows RAG, agent and MCP CloudWatch sources, their collectors and the shared AWS/host telemetry path into Elastic. Detailed audit findings stay in this guide.
 
@@ -26,7 +26,7 @@ The four workload/logging pages use a conventional architecture layout: standalo
 
 | Workload | Example question | What supplies the information? | Who coordinates the request? |
 | --- | --- | --- | --- |
-| RAG | “How do I reset a client’s password?” | Passages retrieved from the Knowledge Base. | Chat Lambda. |
+| RAG | “How do I reset a client’s password?” | Document text retrieved from the Knowledge Base. | Chat Lambda. |
 | Customer agent | “Look up customer C-104.” | A customer tool that checks employee access. | Backend Lambda bridges Harness and Gateway. |
 | MCP | “What is the price of DEMO-001?” | A separate server’s synthetic product tool. | Operator-side client bridges the server and Harness. |
 
@@ -40,22 +40,22 @@ Use **page 2** of the diagram. This walkthrough assumes controls are enabled.
 
 The **S3 corpus bucket** holds the synthetic documents, metadata and manifest. The manifest is the trusted document catalog. Metadata supplies searchable fields such as classification.
 
-During a sync, the **Bedrock Knowledge Base** reads the source documents and invokes **Titan Embeddings V2** to create numerical representations for similarity search. **S3 Vectors** stores the index with associated passage information. The current small fixtures use no chunk splitting. Document ingestion is a preparation step, not something repeated for every question.
+During a sync, the **Bedrock Knowledge Base** reads the source documents and invokes **Titan Embeddings V2** to create numerical representations for similarity search. **S3 Vectors** stores the index with associated document information. The current small fixtures use no chunk splitting. Document ingestion is a preparation step, not something repeated for every question.
 
 ### When the user asks a question
 
 1. **Cognito signs the user in.** It issues a signed token carrying identity and clearance claims. The client sends the question, bearer token and API key. The API key supports API access and usage limits; it does not establish employee identity or document permissions.
 2. **API Gateway and WAF apply the entry controls.** The regional REST API validates the Cognito token before Lambda receives the request. WAF, usage limits and any configured edge restrictions also apply. A rejected request may never reach the application.
 3. **Chat Lambda establishes the user’s access.** It requires verified claims, reads the clearance and loads the manifest from S3. A user with Internal clearance can retrieve Public and Internal documents. Department is not an access rule in this implementation.
-4. **Lambda requests a filtered search.** It calls the Knowledge Base’s `Retrieve` API with the question and an allowlist of classifications. The KB embeds the query and searches S3 Vectors. It returns ranked passages, source locations and metadata; it has not generated an answer.
-5. **Lambda checks the returned passages.** It validates the source and classification against the manifest, checks clearance, scans for configured injection patterns and applies a context-size budget. A matching injection pattern causes quarantine. Pattern matching does not detect every possible injection.
-6. **Lambda constructs the model input.** Selected passages become context alongside the question; the model call also includes system instructions. `included_in_context: true` means a passage was selected for that request. `false` means it was excluded, with a recorded reason. If no permitted, usable passages remain, Lambda returns a message without calling the model.
+4. **Lambda requests a filtered search.** It calls the Knowledge Base’s `Retrieve` API with the question and an allowlist of classifications. The KB embeds the query and searches S3 Vectors. It returns ranked document results, source locations and metadata; it has not generated an answer.
+5. **Lambda checks the returned document text.** It validates the source and classification against the manifest, checks clearance, scans for configured injection patterns and applies a context-size budget. A matching injection pattern causes quarantine: the text is excluded from this request’s model context and the retrieval event records `quarantined_injection` with `included_in_context: false`. The source document remains in S3. Pattern matching does not detect every possible injection.
+6. **Lambda constructs the model input.** Selected document text becomes context alongside the question; the model call also includes system instructions. `included_in_context: true` means the retrieved document text was selected for that request. `false` means it was excluded, with a recorded reason. If no permitted, usable document text remains, Lambda returns a message without calling the model.
 7. **Bedrock generates the answer.** Lambda calls `Converse` separately from retrieval. The configured Bedrock Guardrail is attached when controls are enabled. Guardrails screen the model interaction; they do not replace document authorization.
 8. **The response returns and evidence is collected.** Lambda returns through API Gateway to the client. Application, API and WAF logs go to CloudWatch. The base EC2 Elastic Agent collects those groups and forwards them to Elastic.
 
 Controls-off is an intentional experiment configuration. It omits the Cognito authorizer, clearance enforcement, injection quarantine and model Guardrail attachment. Source validation and the context budget remain. Do not interpret its self-asserted identity as an authenticated employee.
 
-**What to look for:** the question’s request ID, retrieval filter, returned passages, inclusion decisions, model status and answer checks. A retrieved filename alone does not establish that attack text reached the model or changed its answer.
+**What to look for:** the question’s request ID, retrieval filter, returned document text, inclusion decisions, model status and answer checks. A retrieved filename alone does not establish that attack text reached the model or changed its answer.
 
 ## Customer agent: looking up C-104
 
@@ -160,7 +160,7 @@ The pages describe implemented configuration. They do not certify live health, c
 
 Open audit items, recorded here rather than as large boxes in the article diagrams, include: RAG auxiliary-input and generic answer/identity evidence validation (C04/C05), agent invocation-stage/error attribution (C06), and credential-bearing runtime redirects (C09). These remain limitations of the shown implementation, not new controls or completed repairs. The other lifecycle and query findings remain in the separate remediation assessment; these pages are not a complete audit register.
 
-A retrieved passage is not necessarily submitted context. A model tool request is not proof of execution. Attack text reaching the model is not proof that the model followed it. Keep those distinctions when using the diagrams to explain experiments.
+Retrieved document text is not necessarily submitted context. A model tool request is not proof of execution. Attack text reaching the model is not proof that the model followed it. Keep those distinctions when using the diagrams to explain experiments.
 
 ## Updating the diagrams
 
@@ -171,3 +171,4 @@ A retrieved passage is not necessarily submitted context. A model tool request i
 5. Review all five pages for labels, crossings and stale claims. Update this review revision and any dated validation caveat only when supported by evidence.
 
 `AdversaryLabAI.drawio` is an older, separate sketch. It is retained unchanged; use **AdversaryLabAI-architecture.drawio** for this four-page walkthrough.
+

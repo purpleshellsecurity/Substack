@@ -26,11 +26,11 @@ That gave each workload a research purpose. The mapping identifies experiments t
 
 ### A chat app that searches documents
 
-The documents live in S3 and are indexed through a Bedrock Knowledge Base backed by S3 Vectors. The Knowledge Base handles ingestion and similarity search, while the chat Lambda controls which returned passages enter the model request. This gives me a retrieval pipeline to experiment with and a place to inspect the selection before calling the model.
+The documents live in S3 and are indexed through a Bedrock Knowledge Base backed by S3 Vectors. The Knowledge Base handles ingestion and similarity search, while the chat Lambda controls which returned document text enters the model request. This gives me a retrieval pipeline to experiment with and a place to inspect the selection before calling the model.
 
 ![RAG architecture: Cognito sign-in, WAF attached to the REST API stage, a Cognito authorizer on the method, chat Lambda, Bedrock Knowledge Base, S3 corpus, Titan embeddings, S3 Vectors and the separate model call. CloudWatch logs reach Elastic through the base collector.](assets/AdversaryLabAI-rag.png)
 
-With access controls enabled, users sign in through Cognito and the application filters retrieval by their clearance. It validates the returned sources, checks for configured injection patterns, and records passage identifiers, content hashes, and context-inclusion decisions. Those observations help distinguish a document being found from its text being supplied to the model. The pattern check is one control to investigate, not a general guarantee against prompt injection.
+With access controls enabled, users sign in through Cognito and the application filters retrieval by their clearance. It validates the returned sources, checks for configured injection patterns, and records retrieval identifiers, content hashes, and context-inclusion decisions. Those observations help distinguish a document being found from its text being supplied to the model. The pattern check is one control to investigate, not a general guarantee against prompt injection.
 
 ### A customer support agent with one tool
 
@@ -79,3 +79,4 @@ The aim is to help other security engineers ask more precise questions about the
 See you in the next one 👋
 
 Charles
+
