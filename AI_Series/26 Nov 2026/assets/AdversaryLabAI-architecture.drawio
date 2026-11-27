@@ -338,7 +338,7 @@
         <mxCell id="s3-desc" value="Documents + trusted catalog" parent="s3" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#344458;">
           <mxGeometry as="geometry" x="0" y="94" width="230" height="40" />
         </mxCell>
-        <object id="kb" label="" tooltip="Bedrock Knowledge Base&#10;Filtered passage retrieval&#10;ai_lab/terraform/knowledge_base.tf" source="ai_lab/terraform/knowledge_base.tf">
+        <object id="kb" label="" tooltip="Bedrock Knowledge Base&#10;Filtered document retrieval&#10;ai_lab/terraform/knowledge_base.tf" source="ai_lab/terraform/knowledge_base.tf">
           <mxCell parent="1" vertex="1" style="group;">
             <mxGeometry as="geometry" x="685.0" y="590" width="230" height="150" />
           </mxCell>
@@ -349,10 +349,10 @@
         <mxCell id="kb-title-0" value="Bedrock Knowledge Base" parent="kb" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#344458;">
           <mxGeometry as="geometry" x="0" y="70" width="230" height="23" />
         </mxCell>
-        <mxCell id="kb-desc" value="Filtered passage retrieval" parent="kb" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#344458;">
+        <mxCell id="kb-desc" value="Filtered document retrieval" parent="kb" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#344458;">
           <mxGeometry as="geometry" x="0" y="94" width="230" height="40" />
         </mxCell>
-        <object id="vectors" label="" tooltip="Amazon S3 Vectors&#10;Search index + passage data&#10;ai_lab/terraform/knowledge_base.tf" source="ai_lab/terraform/knowledge_base.tf">
+        <object id="vectors" label="" tooltip="Amazon S3 Vectors&#10;Search index + document data&#10;ai_lab/terraform/knowledge_base.tf" source="ai_lab/terraform/knowledge_base.tf">
           <mxCell parent="1" vertex="1" style="group;">
             <mxGeometry as="geometry" x="1205.0" y="590" width="230" height="150" />
           </mxCell>
@@ -363,7 +363,7 @@
         <mxCell id="vectors-title-0" value="Amazon S3 Vectors" parent="vectors" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=18;fontStyle=1;fontColor=#344458;">
           <mxGeometry as="geometry" x="0" y="70" width="230" height="23" />
         </mxCell>
-        <mxCell id="vectors-desc" value="Search index + passage data" parent="vectors" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#344458;">
+        <mxCell id="vectors-desc" value="Search index + document data" parent="vectors" vertex="1" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=top;spacing=0;strokeColor=none;fillColor=none;fontFamily=Arial;fontSize=14;fontStyle=0;fontColor=#344458;">
           <mxGeometry as="geometry" x="0" y="94" width="230" height="40" />
         </mxCell>
         <object id="titan" label="" tooltip="Titan Embeddings V2&#10;Document + query embeddings&#10;ai_lab/terraform/knowledge_base.tf" source="ai_lab/terraform/knowledge_base.tf">
